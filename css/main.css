@@ -35,7 +35,7 @@
   --font-serif: Georgia, "Times New Roman", serif;
   --font-mono: "Courier New", Courier, monospace;
 
-  --font-size-base: 18px;
+  --font-size-base: 27px;
   --font-size-sm: 0.875rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.25rem;
@@ -539,6 +539,67 @@ section {
 
 .cta h2 {
   color: var(--accent-purple);
+}
+
+/* ============================================
+   TIMELINE SECTION
+   ============================================ */
+
+.timeline-section {
+  background: var(--bg-secondary);
+  padding: var(--spacing-3xl) 0;
+  margin: var(--spacing-3xl) 0;
+}
+
+.timeline-section h2 {
+  color: var(--accent-purple);
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.timeline-introduction {
+  max-width: 900px;
+  margin: 0 auto var(--spacing-3xl);
+  line-height: 1.8;
+}
+
+.timeline-introduction p {
+  margin-bottom: var(--spacing-lg);
+}
+
+.timeline-connections {
+  margin: var(--spacing-xl) 0;
+  padding-left: var(--spacing-2xl);
+}
+
+.timeline-connections li {
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+}
+
+.timeline-embed {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  margin-top: var(--spacing-2xl);
+}
+
+.timeline-embed iframe {
+  display: block;
+  width: 100%;
+  border-radius: var(--border-radius);
+}
+
+.timeline-attribution {
+  text-align: center;
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .timeline-embed {
+  background: var(--bg-tertiary);
 }
 
 /* ============================================

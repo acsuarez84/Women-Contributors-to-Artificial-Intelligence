@@ -1,0 +1,135 @@
+[
+  {
+    "id": "aspasia-470bc",
+    "name": "Aspasia of Miletus",
+    "birthYear": -470,
+    "deathYear": -400,
+    "field": "rhetoric",
+    "contributions": [
+      "Taught rhetoric in ancient Athens",
+      "Influenced Socrates and other philosophers",
+      "Reportedly composed speeches for Pericles"
+    ],
+    "culturalImpact": "As one of the few women documented in ancient Greek rhetoric, Aspasia challenges the narrative that rhetoric has always been an exclusively male domain.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Aspasia",
+      "Glenn, Cheryl. 'Rhetoric Retold: Regendering the Tradition from Antiquity Through the Renaissance.' Southern Illinois University Press, 1997."
+    ]
+  },
+  {
+    "id": "julian-norwich-1342",
+    "name": "Julian of Norwich",
+    "birthYear": 1342,
+    "deathYear": 1416,
+    "field": "rhetoric",
+    "contributions": [
+      "First woman to write a book in English ('Revelations of Divine Love')",
+      "Used mystical rhetoric to claim authority in religious discourse",
+      "Developed sophisticated theological arguments"
+    ],
+    "culturalImpact": "Julian's rhetorical strategies for claiming authority as a woman writer influenced later women's rhetorical practices.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Julian_of_Norwich",
+      "Julian of Norwich. 'Revelations of Divine Love.' Penguin Classics, 1998."
+    ]
+  },
+  {
+    "id": "wollstonecraft-1759",
+    "name": "Mary Wollstonecraft",
+    "birthYear": 1759,
+    "deathYear": 1797,
+    "field": "rhetoric",
+    "contributions": [
+      "Authored 'A Vindication of the Rights of Woman,' foundational feminist text",
+      "Used Enlightenment rhetorical strategies to argue for women's education",
+      "Challenged prevailing rhetorics of gender"
+    ],
+    "culturalImpact": "Wollstonecraft's rhetorical work established frameworks for feminist argumentation that continue to influence women's advocacy today.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mary_Wollstonecraft",
+      "Wollstonecraft, Mary. 'A Vindication of the Rights of Woman.' Penguin Classics, 2004."
+    ]
+  },
+  {
+    "id": "truth-1797",
+    "name": "Sojourner Truth",
+    "birthYear": 1797,
+    "deathYear": 1883,
+    "field": "rhetoric",
+    "contributions": [
+      "Powerful orator for abolition and women's rights",
+      "'Ain't I a Woman?' speech challenged intersecting oppressions",
+      "Used personal testimony as political rhetoric"
+    ],
+    "culturalImpact": "Truth's rhetoric centered Black women's experiences and challenged both racist and sexist discourse of her era.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Sojourner_Truth",
+      "Painter, Nell Irvin. 'Sojourner Truth: A Life, A Symbol.' W. W. Norton & Company, 1996."
+    ]
+  },
+  {
+    "id": "cooper-1858",
+    "name": "Anna Julia Cooper",
+    "birthYear": 1858,
+    "deathYear": 1964,
+    "field": "education",
+    "contributions": [
+      "Argued for education as a tool for Black women's liberation",
+      "Authored 'A Voice from the South,' early Black feminist text",
+      "Pioneered intersectional analysis of race and gender"
+    ],
+    "culturalImpact": "Cooper's work established Black women's intellectual authority and contributed to educational rhetoric.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Anna_Julia_Cooper",
+      "Cooper, Anna Julia. 'A Voice from the South.' Oxford University Press, 1988."
+    ]
+  },
+  {
+    "id": "young-1950",
+    "name": "Iris Marion Young",
+    "birthYear": 1949,
+    "deathYear": 2006,
+    "field": "rhetoric",
+    "contributions": [
+      "Theorized 'communicative democracy' and inclusive rhetoric",
+      "Analyzed how rhetorical norms can exclude marginalized groups",
+      "Advocated for diverse rhetorical styles in public discourse"
+    ],
+    "culturalImpact": "Young's work on communicative justice informs understanding of how rhetorical standards can perpetuate inequality.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Iris_Marion_Young",
+      "Young, Iris Marion. 'Inclusion and Democracy.' Oxford University Press, 2000."
+    ]
+  },
+  {
+    "id": "royster-1950",
+    "name": "Jacqueline Jones Royster",
+    "birthYear": 1950,
+    "deathYear": null,
+    "field": "composition",
+    "contributions": [
+      "Recovered histories of African American women's literacy and rhetoric",
+      "Theorized 'critical imagination' in rhetorical scholarship",
+      "Advanced understanding of how race shapes rhetorical traditions"
+    ],
+    "culturalImpact": "Royster's work expanded the composition canon to include Black women's rhetorical practices and challenged Eurocentric narratives.",
+    "sources": [
+      "Royster, Jacqueline Jones. 'Traces of a Stream: Literacy and Social Change Among African American Women.' University of Pittsburgh Press, 2000."
+    ]
+  },
+  {
+    "id": "placeholder-all-1",
+    "name": "[Add Woman Contributor]",
+    "birthYear": 1900,
+    "deathYear": 2000,
+    "field": "rhetoric|composition|linguistics|education|ai",
+    "contributions": [
+      "Description of key contribution 1",
+      "Description of key contribution 2"
+    ],
+    "culturalImpact": "Analysis of cultural or intellectual impact.",
+    "sources": [
+      "Citation or URL"
+    ]
+  }
+]

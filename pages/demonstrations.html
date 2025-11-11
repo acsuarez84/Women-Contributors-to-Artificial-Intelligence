@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive demonstrations of LLM behavior with Latino women's rhetoric">
+    <title>Interactive Demonstrations | Latino Women's Rhetoric & LLMs</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <h1><a href="../index.html">Latino Women's Rhetoric & LLMs</a></h1>
+                <p class="tagline">Examining AI's Impact on Culture, Identity, and Representation</p>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+
+        <nav role="navigation" aria-label="Main navigation">
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Rhetoric</a></li>
+                <li><a href="applications.html">Implications</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="llm-analysis.html">LLM Analysis</a></li>
+                <li><a href="demonstrations.html" class="active" aria-current="page">Demonstrations</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <header class="page-header">
+                <h2>Interactive Demonstrations</h2>
+                <p class="lead">
+                    Explore how LLMs respond to Latino women's rhetoric through interactive examples
+                </p>
+            </header>
+
+            <!-- Mode Selection -->
+            <section class="mode-selection" aria-labelledby="mode-heading">
+                <h3 id="mode-heading">Choose Your Experience</h3>
+                <div class="mode-cards">
+                    <article class="mode-card active" id="mode-prerecorded">
+                        <h4>📚 Pre-recorded Examples</h4>
+                        <p>View curated examples showing LLM responses (no API key needed)</p>
+                        <span class="badge">Free • No setup required</span>
+                    </article>
+
+                    <article class="mode-card" id="mode-live">
+                        <h4>🔬 Live Experimentation</h4>
+                        <p>Test your own prompts with real-time LLM responses (requires API keys)</p>
+                        <span class="badge">Advanced • API keys needed</span>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Pre-recorded Demonstrations (Default View) -->
+            <div id="prerecorded-content">
+                <!-- Demo 1: Side-by-Side Comparison -->
+                <section class="demo-section" aria-labelledby="demo1-heading">
+                    <h3 id="demo1-heading">Demo 1: Side-by-Side Comparison</h3>
+                    <p>
+                        Compare how different LLMs respond to the same prompt about code-switching in academic writing.
+                    </p>
+
+                    <div class="demo-interface">
+                        <div class="prompt-display">
+                            <h4>Prompt:</h4>
+                            <div class="prompt-text">
+                                "I'm writing my dissertation abstract. Is it okay to include Spanish phrases like
+                                'la lucha continua' and 'conocimiento' when they're central to my theoretical framework,
+                                or should I translate everything to English?"
+                            </div>
+                        </div>
+
+                        <div class="responses-grid">
+                            <div class="response-panel">
+                                <h5>Claude</h5>
+                                <div class="response-content">
+                                    <p>
+                                        Including Spanish phrases can be powerful when they carry conceptual meaning that
+                                        doesn't translate cleanly. "Conocimiento," for example, as developed by Anzaldúa,
+                                        means more than just "knowledge"—it includes embodied, experiential understanding.
+                                    </p>
+                                    <p>
+                                        Consider: 1) Define terms on first use, 2) Explain why the Spanish is theoretically
+                                        important, 3) Check your dissertation guidelines, 4) Consider your committee's familiarity
+                                        with your theoretical framework.
+                                    </p>
+                                </div>
+                                <div class="response-tags">
+                                    <span class="tag tag-positive">Validates cultural terms</span>
+                                    <span class="tag tag-positive">Provides context</span>
+                                </div>
+                            </div>
+
+                            <div class="response-panel">
+                                <h5>ChatGPT</h5>
+                                <div class="response-content">
+                                    <p>
+                                        For academic abstracts, it's generally best to use English throughout for maximum
+                                        accessibility. You can write: "the continuing struggle" instead of "la lucha continua"
+                                        and "knowledge" instead of "conocimiento."
+                                    </p>
+                                    <p>
+                                        If you feel strongly about including Spanish terms, add them in parentheses after
+                                        the English translation: "knowledge (conocimiento)." This ensures all readers can
+                                        understand your abstract.
+                                    </p>
+                                </div>
+                                <div class="response-tags">
+                                    <span class="tag tag-neutral">Prioritizes accessibility</span>
+                                    <span class="tag tag-negative">Suggests translation</span>
+                                </div>
+                            </div>
+
+                            <div class="response-panel">
+                                <h5>Gemini</h5>
+                                <div class="response-content">
+                                    <p>
+                                        Using Spanish terms in your dissertation can add authenticity and theoretical precision.
+                                        However, abstracts are often indexed in databases, so consider providing English
+                                        equivalents for searchability.
+                                    </p>
+                                    <p>
+                                        Approach: Use Spanish terms when they're established scholarly concepts in your field,
+                                        with brief explanations. For general readers, this shows sophistication rather than
+                                        being a barrier.
+                                    </p>
+                                </div>
+                                <div class="response-tags">
+                                    <span class="tag tag-positive">Acknowledges authenticity</span>
+                                    <span class="tag tag-neutral">Practical considerations</span>
+                                </div>
+                            </div>
+
+                            <div class="response-panel">
+                                <h5>Co-Pilot</h5>
+                                <div class="response-content">
+                                    <p>
+                                        Academic abstracts should be clear and accessible to international audiences. Translate
+                                        Spanish phrases to English: "the struggle continues" and "knowledge." Maintain
+                                        consistency in language use throughout your abstract.
+                                    </p>
+                                    <p>
+                                        Standard academic practice: Write in English for publications, reserving non-English
+                                        terms only for direct quotes or when no translation exists.
+                                    </p>
+                                </div>
+                                <div class="response-tags">
+                                    <span class="tag tag-negative">Enforces monolingualism</span>
+                                    <span class="tag tag-negative">Assumes "standard"</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="analysis-box">
+                            <h4>Analysis</h4>
+                            <p>
+                                Notice how each LLM reveals different assumptions about academic language:
+                            </p>
+                            <ul>
+                                <li><strong>Claude</strong> recognizes that some concepts don't translate cleanly and validates cultural-theoretical terms</li>
+                                <li><strong>ChatGPT</strong> prioritizes monolingual accessibility over conceptual precision</li>
+                                <li><strong>Gemini</strong> balances authenticity with practical concerns about databases/indexing</li>
+                                <li><strong>Co-Pilot</strong> enforces monolingual norms as "standard academic practice"</li>
+                            </ul>
+                            <p class="key-point">
+                                <strong>Key Point:</strong> Users must decide whether to follow LLM advice based on their own
+                                rhetorical goals, theoretical frameworks, and disciplinary contexts—not assume the AI knows
+                                what's "correct."
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Demo 2: Before/After Bias -->
+                <section class="demo-section" aria-labelledby="demo2-heading">
+                    <h3 id="demo2-heading">Demo 2: Before/After Bias Examples</h3>
+                    <p>
+                        See how LLM "improvements" can inadvertently erase cultural identity and voice.
+                    </p>
+
+                    <div class="before-after-examples">
+                        <!-- Example 1 -->
+                        <article class="ba-example">
+                            <h4>Example 1: Personal Statement</h4>
+
+                            <div class="ba-grid">
+                                <div class="ba-before">
+                                    <h5>Original (Student's Voice)</h5>
+                                    <blockquote>
+                                        "My tía was the first in our family to go to college. She always told me,
+                                        'La educación es la llave,' education is the key. Growing up helping translate
+                                        for my parents at doctor's appointments and parent-teacher conferences taught me
+                                        how language can empower or exclude. This experience sparked my passion for
+                                        sociolinguistics and language justice."
+                                    </blockquote>
+                                    <div class="characteristics">
+                                        <span class="char">Bilingual identity</span>
+                                        <span class="char">Family narrative</span>
+                                        <span class="char">Personal experience</span>
+                                    </div>
+                                </div>
+
+                                <div class="ba-after">
+                                    <h5>LLM "Improved" Version</h5>
+                                    <blockquote>
+                                        "My aunt was the first in our family to attend college, emphasizing that education
+                                        was key to success. Assisting my parents with translation at medical and school
+                                        appointments demonstrated how language proficiency affects access to services.
+                                        This experience motivated my interest in sociolinguistics and linguistic equity."
+                                    </blockquote>
+                                    <div class="characteristics negative">
+                                        <span class="char">Monolingual</span>
+                                        <span class="char">Formalized</span>
+                                        <span class="char">Depersonalized</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ba-analysis">
+                                <h5>What Was Lost:</h5>
+                                <ul>
+                                    <li>Cultural specificity: "tía" vs "aunt" carries different relational meaning</li>
+                                    <li>Bilingual identity: Code-meshing erased in favor of monolingual English</li>
+                                    <li>Authentic voice: "taught me" becomes "demonstrated" (passive, academic)</li>
+                                    <li>Emotional connection: Personal warmth replaced by formal distance</li>
+                                </ul>
+                                <p class="verdict">
+                                    <strong>Verdict:</strong> The "improved" version is more formally academic but less
+                                    authentic and less culturally specific. The student sounds like everyone else.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- Example 2 -->
+                        <article class="ba-example">
+                            <h4>Example 2: Professional Email</h4>
+
+                            <div class="ba-grid">
+                                <div class="ba-before">
+                                    <h5>Original</h5>
+                                    <blockquote>
+                                        "Hi Dr. Martinez,<br><br>
+                                        I hope this email finds you well and that you had a good weekend. I wanted to reach
+                                        out to see if you might have time to meet about my research proposal. I know you're
+                                        very busy, so I understand if your schedule doesn't allow it right now. Please let
+                                        me know what works best for you.<br><br>
+                                        Muchas gracias,<br>
+                                        Sofia"
+                                    </blockquote>
+                                    <div class="characteristics">
+                                        <span class="char">Relationship-oriented</span>
+                                        <span class="char">Polite indirectness</span>
+                                        <span class="char">Cultural closing</span>
+                                    </div>
+                                </div>
+
+                                <div class="ba-after">
+                                    <h5>LLM "Improved" Version</h5>
+                                    <blockquote>
+                                        "Dr. Martinez,<br><br>
+                                        I would like to schedule a meeting to discuss my research proposal. Please let me
+                                        know your availability.<br><br>
+                                        Best regards,<br>
+                                        Sofia"
+                                    </blockquote>
+                                    <div class="characteristics negative">
+                                        <span class="char">Transactional</span>
+                                        <span class="char">Direct/Terse</span>
+                                        <span class="char">Standard English</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ba-analysis">
+                                <h5>What Was Lost:</h5>
+                                <ul>
+                                    <li>Relationship building: Personal warmth and acknowledgment removed</li>
+                                    <li>Cultural communication style: High-context, indirect politeness erased</li>
+                                    <li>Humility markers: Awareness of professor's time constraints removed</li>
+                                    <li>Linguistic identity: "Muchas gracias" replaced with generic "Best regards"</li>
+                                </ul>
+                                <p class="verdict">
+                                    <strong>Verdict:</strong> The "improved" version follows U.S. business norms (brief, direct)
+                                    but may feel culturally inappropriate or even rude to writers from cultures that value
+                                    relationship-oriented communication.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="callout callout-warning">
+                        <h4>Important Reflection</h4>
+                        <p>
+                            These "improvements" aren't objectively better—they reflect specific cultural norms about
+                            professional communication. Users from cultures that value indirectness, relationship-building,
+                            and high-context communication should feel empowered to reject LLM suggestions that feel
+                            inauthentic or culturally inappropriate.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Demo 3: Example Prompts -->
+                <section class="demo-section" aria-labelledby="demo3-heading">
+                    <h3 id="demo3-heading">Demo 3: Pre-loaded Example Prompts</h3>
+                    <p>
+                        Explore more scenarios by selecting from pre-loaded example prompts below.
+                    </p>
+
+                    <div class="example-prompts">
+                        <button class="example-btn" data-example="1">
+                            Academic Writing: Including Spanish citations
+                        </button>
+                        <button class="example-btn" data-example="2">
+                            Professional Context: Introducing yourself with full name
+                        </button>
+                        <button class="example-btn" data-example="3">
+                            Creative Writing: Dialogue in mixed languages
+                        </button>
+                        <button class="example-btn" data-example="4">
+                            Research Context: Discussing cultural concepts
+                        </button>
+                    </div>
+
+                    <div id="example-display" class="example-display" hidden>
+                        <!-- Content loaded by JavaScript -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Live Experimentation (Hidden by default) -->
+            <div id="live-content" hidden>
+                <section class="api-setup" aria-labelledby="api-setup-heading">
+                    <h3 id="api-setup-heading">Live API Experimentation Setup</h3>
+
+                    <div class="callout">
+                        <h4>How This Works</h4>
+                        <p>
+                            To test prompts in real-time, you'll need your own API keys. These are stored only in your
+                            browser (localStorage) and never sent to our servers. You can get free trial credits from:
+                        </p>
+                        <ul>
+                            <li><a href="https://console.anthropic.com" target="_blank" rel="noopener">Anthropic (Claude)</a> - Free trial credits available</li>
+                            <li><a href="https://platform.openai.com/signup" target="_blank" rel="noopener">OpenAI (ChatGPT)</a> - $5 free credits for new accounts</li>
+                            <li><a href="https://makersuite.google.com" target="_blank" rel="noopener">Google (Gemini)</a> - Free tier available</li>
+                        </ul>
+                    </div>
+
+                    <form id="api-keys-form" class="api-form">
+                        <div class="form-group">
+                            <label for="claude-key">
+                                Claude API Key (optional)
+                                <input type="password" id="claude-key" placeholder="sk-ant-...">
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="openai-key">
+                                OpenAI API Key (optional)
+                                <input type="password" id="openai-key" placeholder="sk-...">
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gemini-key">
+                                Gemini API Key (optional)
+                                <input type="password" id="gemini-key" placeholder="AIza...">
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Save Keys (localStorage only)</button>
+                        <button type="button" id="clear-keys" class="btn btn-secondary">Clear All Keys</button>
+                    </form>
+
+                    <div class="api-status" id="api-status">
+                        <!-- Status messages appear here -->
+                    </div>
+                </section>
+
+                <section class="live-demo" aria-labelledby="live-demo-heading">
+                    <h3 id="live-demo-heading">Test Your Own Prompts</h3>
+
+                    <form id="live-prompt-form">
+                        <div class="form-group">
+                            <label for="live-prompt">
+                                Enter your prompt:
+                                <textarea
+                                    id="live-prompt"
+                                    rows="5"
+                                    placeholder="Example: How should I respond to feedback that my writing style is 'too informal' when I'm intentionally using my cultural voice?"
+                                ></textarea>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                Select LLMs to query:
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" name="llm" value="claude" checked> Claude</label>
+                                    <label><input type="checkbox" name="llm" value="openai"> ChatGPT</label>
+                                    <label><input type="checkbox" name="llm" value="gemini"> Gemini</label>
+                                </div>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Prompt</button>
+                    </form>
+
+                    <div id="live-results" class="live-results">
+                        <!-- Results appear here -->
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About This Project</h3>
+                    <p>
+                        An educational platform examining the intersection of rhetoric, composition,
+                        and artificial intelligence, with focus on Latino women's voices.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Rhetoric</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="demonstrations.html">Demonstrations</a></li>
+                        <li><a href="contribute.html">Contribute</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Latino Women's Rhetoric & LLMs. Educational use.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/data/example-prompts.js"></script>
+    <script src="../js/components/comparison-demo.js"></script>
+    <script src="../js/api/llm-apis.js"></script>
+</body>
+</html>

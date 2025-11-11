@@ -1,0 +1,251 @@
+{
+  "nodes": [
+    {
+      "id": "rhetoric",
+      "label": "Rhetoric",
+      "description": "The art of effective communication and persuasion",
+      "level": 1
+    },
+    {
+      "id": "composition",
+      "label": "Composition",
+      "description": "The process of creating texts across media",
+      "level": 1
+    },
+    {
+      "id": "ethos",
+      "label": "Ethos",
+      "description": "Credibility and ethical appeal",
+      "level": 2
+    },
+    {
+      "id": "pathos",
+      "label": "Pathos",
+      "description": "Emotional appeal",
+      "level": 2
+    },
+    {
+      "id": "logos",
+      "label": "Logos",
+      "description": "Logical appeal and reasoning",
+      "level": 2
+    },
+    {
+      "id": "kairos",
+      "label": "Kairos",
+      "description": "Timing and context",
+      "level": 2
+    },
+    {
+      "id": "audience",
+      "label": "Audience",
+      "description": "The recipients of communication",
+      "level": 2
+    },
+    {
+      "id": "purpose",
+      "label": "Purpose",
+      "description": "The goal of communication",
+      "level": 2
+    },
+    {
+      "id": "genre",
+      "label": "Genre",
+      "description": "Conventional forms of communication",
+      "level": 3
+    },
+    {
+      "id": "style",
+      "label": "Style",
+      "description": "Manner of expression",
+      "level": 3
+    },
+    {
+      "id": "invention",
+      "label": "Invention",
+      "description": "Discovery of arguments and ideas",
+      "level": 3
+    },
+    {
+      "id": "arrangement",
+      "label": "Arrangement",
+      "description": "Organization of ideas",
+      "level": 3
+    },
+    {
+      "id": "delivery",
+      "label": "Delivery",
+      "description": "Presentation of message",
+      "level": 3
+    },
+    {
+      "id": "code-switching",
+      "label": "Code-Switching",
+      "description": "Moving between languages or dialects",
+      "level": 3
+    },
+    {
+      "id": "code-meshing",
+      "label": "Code-Meshing",
+      "description": "Blending languages within text",
+      "level": 3
+    },
+    {
+      "id": "testimonio",
+      "label": "Testimonio",
+      "description": "Personal narrative as political rhetoric",
+      "level": 3
+    },
+    {
+      "id": "identity",
+      "label": "Identity",
+      "description": "Self-presentation through language",
+      "level": 3
+    },
+    {
+      "id": "cultural-rhetoric",
+      "label": "Cultural Rhetoric",
+      "description": "Culture-specific communication practices",
+      "level": 3
+    },
+    {
+      "id": "multimodality",
+      "label": "Multimodality",
+      "description": "Combining multiple modes (text, image, sound)",
+      "level": 3
+    },
+    {
+      "id": "digital-rhetoric",
+      "label": "Digital Rhetoric",
+      "description": "Communication in digital spaces",
+      "level": 3
+    }
+  ],
+  "edges": [
+    {
+      "source": "rhetoric",
+      "target": "ethos",
+      "relationship": "includes"
+    },
+    {
+      "source": "rhetoric",
+      "target": "pathos",
+      "relationship": "includes"
+    },
+    {
+      "source": "rhetoric",
+      "target": "logos",
+      "relationship": "includes"
+    },
+    {
+      "source": "rhetoric",
+      "target": "kairos",
+      "relationship": "includes"
+    },
+    {
+      "source": "composition",
+      "target": "genre",
+      "relationship": "considers"
+    },
+    {
+      "source": "composition",
+      "target": "style",
+      "relationship": "considers"
+    },
+    {
+      "source": "composition",
+      "target": "arrangement",
+      "relationship": "involves"
+    },
+    {
+      "source": "composition",
+      "target": "invention",
+      "relationship": "involves"
+    },
+    {
+      "source": "rhetoric",
+      "target": "audience",
+      "relationship": "addresses"
+    },
+    {
+      "source": "rhetoric",
+      "target": "purpose",
+      "relationship": "serves"
+    },
+    {
+      "source": "rhetoric",
+      "target": "delivery",
+      "relationship": "requires"
+    },
+    {
+      "source": "ethos",
+      "target": "identity",
+      "relationship": "builds-on"
+    },
+    {
+      "source": "style",
+      "target": "identity",
+      "relationship": "expresses"
+    },
+    {
+      "source": "cultural-rhetoric",
+      "target": "code-switching",
+      "relationship": "includes"
+    },
+    {
+      "source": "cultural-rhetoric",
+      "target": "code-meshing",
+      "relationship": "includes"
+    },
+    {
+      "source": "cultural-rhetoric",
+      "target": "testimonio",
+      "relationship": "includes"
+    },
+    {
+      "source": "composition",
+      "target": "multimodality",
+      "relationship": "embraces"
+    },
+    {
+      "source": "composition",
+      "target": "digital-rhetoric",
+      "relationship": "includes"
+    },
+    {
+      "source": "code-meshing",
+      "target": "identity",
+      "relationship": "expresses"
+    },
+    {
+      "source": "testimonio",
+      "target": "pathos",
+      "relationship": "employs"
+    },
+    {
+      "source": "testimonio",
+      "target": "ethos",
+      "relationship": "builds"
+    },
+    {
+      "source": "genre",
+      "target": "audience",
+      "relationship": "shapes-for"
+    },
+    {
+      "source": "purpose",
+      "target": "audience",
+      "relationship": "defines-for"
+    },
+    {
+      "source": "kairos",
+      "target": "audience",
+      "relationship": "considers"
+    },
+    {
+      "source": "digital-rhetoric",
+      "target": "multimodality",
+      "relationship": "utilizes"
+    }
+  ]
+}

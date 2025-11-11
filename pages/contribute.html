@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contribute corrections and additions to improve this educational resource">
+    <title>Contribute | Latino Women's Rhetoric & LLMs</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <h1><a href="../index.html">Latino Women's Rhetoric & LLMs</a></h1>
+                <p class="tagline">Examining AI's Impact on Culture, Identity, and Representation</p>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+
+        <nav role="navigation" aria-label="Main navigation">
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Rhetoric</a></li>
+                <li><a href="applications.html">Implications</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="llm-analysis.html">LLM Analysis</a></li>
+                <li><a href="demonstrations.html">Demonstrations</a></li>
+                <li><a href="contribute.html" class="active" aria-current="page">Contribute</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <header class="page-header">
+                <h2>Contribute to This Resource</h2>
+                <p class="lead">
+                    Help improve this educational platform by submitting corrections, additions, and insights
+                </p>
+            </header>
+
+            <!-- Overview -->
+            <section aria-labelledby="contribute-overview">
+                <h3 id="contribute-overview">Why Your Contributions Matter</h3>
+                <p>
+                    This is a living educational resource. As an open platform examining how LLMs affect Latino women's
+                    rhetoric and representation, we depend on community input to:
+                </p>
+                <ul>
+                    <li><strong>Correct inaccuracies</strong> in historical information or analysis</li>
+                    <li><strong>Add missing contributors</strong> to the timeline</li>
+                    <li><strong>Share new research</strong> on LLMs and cultural representation</li>
+                    <li><strong>Provide lived experience</strong> that enriches understanding</li>
+                    <li><strong>Suggest improvements</strong> to accessibility and usability</li>
+                </ul>
+
+                <div class="callout">
+                    <h4>Unique Feature: See How LLMs Respond</h4>
+                    <p>
+                        When you submit a correction, you can optionally see how LLMs might regenerate the content
+                        based on your input—and receive an explanation of the algorithmic implications of these changes.
+                        This demonstrates how LLMs handle correction and cultural context.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contribution Methods -->
+            <section aria-labelledby="methods">
+                <h3 id="methods">How to Contribute</h3>
+
+                <div class="method-cards">
+                    <article class="method-card">
+                        <h4>📝 Quick Notes (LocalStorage)</h4>
+                        <p>
+                            Save personal annotations and corrections that stay in your browser. Great for taking notes
+                            while learning, but won't be shared with others or saved if you clear your browser data.
+                        </p>
+                        <button class="btn btn-primary" id="show-local-form">Add Local Note</button>
+                    </article>
+
+                    <article class="method-card">
+                        <h4>🔄 Persistent Contributions (GitHub Issues)</h4>
+                        <p>
+                            Submit corrections and additions via GitHub Issues. These are public, persistent, and can
+                            be reviewed for inclusion in the site. Requires a free GitHub account.
+                        </p>
+                        <button class="btn btn-primary" id="show-github-form">Submit via GitHub</button>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Local Contribution Form -->
+            <section id="local-contribution-section" class="contribution-form-section" hidden>
+                <h3>Add Local Note/Annotation</h3>
+                <p class="form-description">
+                    This note will be saved in your browser only (localStorage). It won't be shared with others.
+                </p>
+
+                <form id="local-contribution-form" class="contribution-form">
+                    <div class="form-group">
+                        <label for="local-page">
+                            Which page is this about?
+                            <select id="local-page" required>
+                                <option value="">Select a page...</option>
+                                <option value="about">About Rhetoric & Composition</option>
+                                <option value="applications">Cultural Implications</option>
+                                <option value="timeline">Timeline</option>
+                                <option value="llm-analysis">LLM Analysis</option>
+                                <option value="demonstrations">Demonstrations</option>
+                                <option value="general">General feedback</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="local-note">
+                            Your note:
+                            <textarea
+                                id="local-note"
+                                rows="6"
+                                placeholder="Example: The timeline is missing María Amparo Ruiz de Burton, who published novels in English and Spanish in the 1800s that challenged racial and gender stereotypes..."
+                                required
+                            ></textarea>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Save Note Locally</button>
+                    <button type="button" class="btn btn-secondary" id="cancel-local">Cancel</button>
+                </form>
+
+                <div id="local-notes-display" class="notes-display">
+                    <h4>Your Saved Notes</h4>
+                    <div id="local-notes-list">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- GitHub Contribution Form -->
+            <section id="github-contribution-section" class="contribution-form-section" hidden>
+                <h3>Submit Contribution via GitHub Issues</h3>
+                <p class="form-description">
+                    This will create a public GitHub Issue that can be reviewed and incorporated into the site.
+                    You'll need a free GitHub account.
+                </p>
+
+                <form id="github-contribution-form" class="contribution-form">
+                    <div class="form-group">
+                        <label for="contribution-type">
+                            Type of contribution:
+                            <select id="contribution-type" required>
+                                <option value="">Select type...</option>
+                                <option value="correction">Correction</option>
+                                <option value="addition-timeline">Timeline Addition</option>
+                                <option value="addition-content">Content Addition</option>
+                                <option value="research">New Research/Citation</option>
+                                <option value="accessibility">Accessibility Issue</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contribution-page">
+                            Related page:
+                            <select id="contribution-page">
+                                <option value="">Select a page...</option>
+                                <option value="about">About Rhetoric & Composition</option>
+                                <option value="applications">Cultural Implications</option>
+                                <option value="timeline">Timeline</option>
+                                <option value="llm-analysis">LLM Analysis</option>
+                                <option value="demonstrations">Demonstrations</option>
+                                <option value="general">General</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="current-content">
+                            Current content (if correcting):
+                            <textarea
+                                id="current-content"
+                                rows="3"
+                                placeholder="Copy the text that needs correction..."
+                            ></textarea>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proposed-change">
+                            Proposed change or addition:
+                            <textarea
+                                id="proposed-change"
+                                rows="6"
+                                placeholder="Describe your correction/addition. For timeline additions, include: name, dates, field, contributions, and sources."
+                                required
+                            ></textarea>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contribution-sources">
+                            Sources/citations (if applicable):
+                            <textarea
+                                id="contribution-sources"
+                                rows="3"
+                                placeholder="URLs, book citations, or other references..."
+                            ></textarea>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contributor-name">
+                            Your name (optional):
+                            <input
+                                type="text"
+                                id="contributor-name"
+                                placeholder="How should we credit you?"
+                            >
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit via GitHub Issues</button>
+                    <button type="button" class="btn btn-secondary" id="cancel-github">Cancel</button>
+                </form>
+
+                <div id="github-status" class="status-message">
+                    <!-- Status messages appear here -->
+                </div>
+            </section>
+
+            <!-- LLM Regeneration Demo -->
+            <section class="regeneration-demo" aria-labelledby="regen-heading">
+                <h3 id="regen-heading">See How LLMs Handle Your Corrections</h3>
+                <p>
+                    After submitting a correction, you can optionally explore how different LLMs might regenerate
+                    the content. This feature requires your own API keys (stored locally).
+                </p>
+
+                <div class="callout callout-info">
+                    <h4>Educational Purpose</h4>
+                    <p>
+                        This feature demonstrates:
+                    </p>
+                    <ul>
+                        <li>How LLMs incorporate new information</li>
+                        <li>Whether cultural context is preserved or lost in regeneration</li>
+                        <li>How different models handle corrections differently</li>
+                        <li>The algorithmic implications of using AI to update cultural content</li>
+                    </ul>
+                    <p>
+                        <strong>This is for learning—not for automatically updating the site!</strong> All contributions
+                        are reviewed by humans before being incorporated.
+                    </p>
+                </div>
+
+                <button class="btn btn-secondary" id="show-regen-demo">
+                    Try Content Regeneration Demo
+                </button>
+
+                <div id="regen-demo-section" hidden>
+                    <h4>Content Regeneration Demonstration</h4>
+
+                    <div class="regen-interface">
+                        <div class="regen-input">
+                            <label for="original-content">
+                                Original content:
+                                <textarea id="original-content" rows="4" readonly>
+Rhetoric emerged in ancient Greece and Rome as a formal discipline for public speaking.
+                                </textarea>
+                            </label>
+
+                            <label for="correction-input">
+                                Your correction/addition:
+                                <textarea id="correction-input" rows="4" placeholder="Example: This Eurocentric framing erases indigenous rhetorical traditions that existed long before ancient Greece, including those of indigenous peoples in the Americas..."></textarea>
+                            </label>
+                        </div>
+
+                        <button class="btn btn-primary" id="regenerate-btn">
+                            Regenerate with LLM (requires API key)
+                        </button>
+
+                        <div id="regenerated-output" class="comparison-output">
+                            <!-- Outputs appear here -->
+                        </div>
+
+                        <div id="algorithmic-implications" class="implications-box">
+                            <h5>Algorithmic Implications</h5>
+                            <!-- Explanation appears here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Guidelines -->
+            <section aria-labelledby="guidelines">
+                <h3 id="guidelines">Contribution Guidelines</h3>
+
+                <div class="guidelines-content">
+                    <h4>What We're Looking For</h4>
+                    <ul>
+                        <li><strong>Accurate information</strong> with verifiable sources</li>
+                        <li><strong>Respectful, constructive feedback</strong></li>
+                        <li><strong>Diverse perspectives</strong> on rhetoric and LLMs</li>
+                        <li><strong>Missing voices</strong> in the historical timeline</li>
+                        <li><strong>Accessibility improvements</strong></li>
+                    </ul>
+
+                    <h4>Timeline Contributions</h4>
+                    <p>When suggesting a timeline addition, please include:</p>
+                    <ul>
+                        <li><strong>Full name</strong> of the contributor</li>
+                        <li><strong>Birth/death years</strong> (or active years)</li>
+                        <li><strong>Field(s)</strong>: rhetoric, composition, linguistics, AI, etc.</li>
+                        <li><strong>Key contributions</strong>: What did they contribute? Why is it significant?</li>
+                        <li><strong>Cultural/identity impact</strong>: How does this relate to Latino women's rhetoric?</li>
+                        <li><strong>Sources</strong>: Citations, URLs, or references</li>
+                    </ul>
+
+                    <h4>What We Can't Accept</h4>
+                    <ul>
+                        <li>Unverified or false information</li>
+                        <li>Discriminatory or hateful content</li>
+                        <li>Commercial promotions</li>
+                        <li>Plagiarism</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Current Contributions -->
+            <section aria-labelledby="current-contributions">
+                <h3 id="current-contributions">Recent Contributions</h3>
+                <p>
+                    View recent community contributions and their status:
+                </p>
+
+                <div id="contributions-list" class="contributions-list">
+                    <div class="loading-message">
+                        <a href="https://github.com/acsuarez84/Women-Contributors-to-Artificial-Intelligence/issues" target="_blank" rel="noopener" class="btn btn-secondary">
+                            View All Contributions on GitHub →
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About This Project</h3>
+                    <p>
+                        An educational platform examining the intersection of rhetoric, composition,
+                        and artificial intelligence, with focus on Latino women's voices.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Rhetoric</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="demonstrations.html">Demonstrations</a></li>
+                        <li><a href="contribute.html">Contribute</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Latino Women's Rhetoric & LLMs. Educational use.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/components/local-storage.js"></script>
+    <script src="../js/components/user-contributions.js"></script>
+    <script src="../js/components/content-regenerator.js"></script>
+    <script src="../js/api/github-api.js"></script>
+    <script src="../js/api/llm-apis.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "sor-juana-1651",
+    "name": "Sor Juana Inés de la Cruz",
+    "birthYear": 1651,
+    "deathYear": 1695,
+    "field": "rhetoric",
+    "contributions": [
+      "Defended women's right to education through rhetorical argumentation",
+      "Used sophisticated rhetoric in 'Respuesta a Sor Filotea' to challenge patriarchal authority",
+      "Demonstrated mastery of multiple rhetorical genres: poetry, drama, theological argument"
+    ],
+    "culturalImpact": "As a Mexican nun and scholar, Sor Juana's rhetorical work challenged both colonial and gender hierarchies. Her arguments for women's intellectual rights laid groundwork for Latino feminist thought.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Juana_In%C3%A9s_de_la_Cruz",
+      "Paz, Octavio. 'Sor Juana: Or, The Traps of Faith.' Harvard University Press, 1988."
+    ]
+  },
+  {
+    "id": "ruiz-de-burton-1832",
+    "name": "María Amparo Ruiz de Burton",
+    "birthYear": 1832,
+    "deathYear": 1895,
+    "field": "literature",
+    "contributions": [
+      "First Mexican American woman to publish novels in English",
+      "Used narrative rhetoric to challenge Anglo-American stereotypes of Mexicans",
+      "Employed satire and social critique to address land dispossession"
+    ],
+    "culturalImpact": "Ruiz de Burton's rhetorical strategies in fiction provided counter-narratives to prevailing representations of Mexican Americans during the post-Mexican-American War period.",
+    "sources": [
+      "https://en.wikipedia.org/wiki/Mar%C3%ADa_Amparo_Ruiz_de_Burton",
+      "Ruiz de Burton, María Amparo. 'The Squatter and the Don.' Modern Library, 2004."
+    ]
+  },
+  {
+    "id": "anzaldua-1942",
+    "name": "Gloria Anzaldúa",
+    "birthYear": 1942,
+    "deathYear": 2004,
+    "field": "composition",
+    "contributions": [
+      "Theorized 'mestiza consciousness' as a rhetorical and epistemological framework",
+      "Pioneered code-meshing as legitimate scholarly practice",
+      "Developed concept of 'borderlands' as rhetorical and cultural space",
+      "Challenged academic conventions through bilingual, genre-blending writing"
+    ],
+    "culturalImpact": "Anzaldúa's work fundamentally challenged what counts as 'academic' rhetoric and composition, validating Latino women's linguistic and cultural practices as sophisticated meaning-making tools.",
+    "sources": [
+      "Anzaldúa, Gloria. 'Borderlands/La Frontera: The New Mestiza.' Aunt Lute Books, 1987.",
+      "https://en.wikipedia.org/wiki/Gloria_E._Anzald%C3%BAa"
+    ]
+  },
+  {
+    "id": "moraga-1952",
+    "name": "Cherríe Moraga",
+    "birthYear": 1952,
+    "deathYear": null,
+    "field": "rhetoric",
+    "contributions": [
+      "Co-edited 'This Bridge Called My Back,' foundational text in women of color feminism",
+      "Theorized intersectionality before the term was coined",
+      "Used testimonio as rhetorical form for political and personal truth-telling"
+    ],
+    "culturalImpact": "Moraga's rhetorical work centers Chicana lesbian experience and challenges dominant feminist discourse to account for race, class, and sexuality.",
+    "sources": [
+      "Moraga, Cherríe, and Gloria Anzaldúa. 'This Bridge Called My Back.' Kitchen Table: Women of Color Press, 1981.",
+      "https://en.wikipedia.org/wiki/Cherr%C3%ADe_Moraga"
+    ]
+  },
+  {
+    "id": "placeholder-1",
+    "name": "[Add Latino Woman Contributor]",
+    "birthYear": 1900,
+    "deathYear": 2000,
+    "field": "rhetoric|composition|linguistics|education|activism|ai",
+    "contributions": [
+      "Description of key contribution 1",
+      "Description of key contribution 2"
+    ],
+    "culturalImpact": "Analysis of how this work affects Latino women's representation, identity, or cultural expression.",
+    "sources": [
+      "Citation or URL"
+    ]
+  }
+]

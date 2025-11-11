@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Compare how different LLMs handle Latino women's rhetoric">
+    <title>LLM Analysis | Latino Women's Rhetoric & LLMs</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/visualizations.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header role="banner">
+        <div class="container">
+            <div class="header-content">
+                <h1><a href="../index.html">Latino Women's Rhetoric & LLMs</a></h1>
+                <p class="tagline">Examining AI's Impact on Culture, Identity, and Representation</p>
+            </div>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+        </div>
+
+        <nav role="navigation" aria-label="Main navigation">
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About Rhetoric</a></li>
+                <li><a href="applications.html">Implications</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+                <li><a href="llm-analysis.html" class="active" aria-current="page">LLM Analysis</a></li>
+                <li><a href="demonstrations.html">Demonstrations</a></li>
+                <li><a href="contribute.html">Contribute</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <header class="page-header">
+                <h2>LLM Comparison & Analysis</h2>
+                <p class="lead">
+                    How different AI models handle Latino women's rhetoric, culture, and representation
+                </p>
+            </header>
+
+            <!-- Overview -->
+            <section aria-labelledby="comparison-overview">
+                <h3 id="comparison-overview">Comparing Four Major LLMs</h3>
+                <p>
+                    We examine how Claude (Anthropic), ChatGPT (OpenAI), Gemini (Google), and Co-Pilot (Microsoft)
+                    respond to prompts related to Latino women's rhetoric and cultural expression. Each model has
+                    different training data, design choices, and built-in biases that affect their outputs.
+                </p>
+
+                <div class="llm-cards">
+                    <article class="llm-card">
+                        <h4>Claude (Anthropic)</h4>
+                        <p>Known for nuanced responses and Constitutional AI training focused on helpfulness, harmlessness, and honesty.</p>
+                        <a href="https://claude.ai" target="_blank" rel="noopener" class="btn btn-small">Try Claude →</a>
+                    </article>
+
+                    <article class="llm-card">
+                        <h4>ChatGPT (OpenAI)</h4>
+                        <p>Most widely-used LLM, trained on diverse internet text with RLHF (Reinforcement Learning from Human Feedback).</p>
+                        <a href="https://chat.openai.com" target="_blank" rel="noopener" class="btn btn-small">Try ChatGPT →</a>
+                    </article>
+
+                    <article class="llm-card">
+                        <h4>Gemini (Google)</h4>
+                        <p>Google's multimodal model with strong integration across Google services and products.</p>
+                        <a href="https://gemini.google.com" target="_blank" rel="noopener" class="btn btn-small">Try Gemini →</a>
+                    </article>
+
+                    <article class="llm-card">
+                        <h4>Co-Pilot (Microsoft)</h4>
+                        <p>Integrated into Microsoft products, particularly focused on coding and productivity assistance.</p>
+                        <a href="https://copilot.microsoft.com" target="_blank" rel="noopener" class="btn btn-small">Try Co-Pilot →</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Interactive Visualization -->
+            <section class="comparison-viz" aria-labelledby="viz-heading">
+                <h3 id="viz-heading">Interactive Comparison Visualization</h3>
+                <p>
+                    This visualization shows comparative analysis of how each LLM responds to the same prompts.
+                    Click on any data point to see detailed examples and analysis.
+                </p>
+                <div id="llm-comparison-canvas" class="visualization-container" role="img" aria-label="Interactive comparison of LLM outputs"></div>
+
+                <div class="visualization-controls">
+                    <label for="prompt-select">
+                        Select Analysis Category:
+                        <select id="prompt-select">
+                            <option value="code-switching">Code-Switching Recognition</option>
+                            <option value="cultural-context">Cultural Context Understanding</option>
+                            <option value="rhetorical-styles">Rhetorical Style Diversity</option>
+                            <option value="representation">Representation & Stereotypes</option>
+                            <option value="language-preservation">Language Preservation</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Pre-recorded Examples -->
+            <section class="comparison-examples" aria-labelledby="examples-heading">
+                <h3 id="examples-heading">Detailed Examples & Analysis</h3>
+
+                <!-- Example 1: Code-Switching -->
+                <article class="comparison-example">
+                    <h4>Example 1: Code-Switching Recognition</h4>
+
+                    <div class="prompt-box">
+                        <h5>Prompt:</h5>
+                        <p>
+                            "Please help me revise this paragraph for my graduate school application: 'Growing up,
+                            I learned que la educación es poder. My abuela always told me, "Mija, you need to estudiar
+                            mucho para tener un buen futuro." This code-meshing between English and Spanish is part
+                            of who I am, reflecting my bilingual identity and the consejos that shaped my academic journey.'"
+                        </p>
+                    </div>
+
+                    <div class="llm-responses">
+                        <div class="response-box">
+                            <h5>Claude's Response:</h5>
+                            <p class="response-text">
+                                "Your writing beautifully demonstrates code-meshing as a rhetorical choice. The Spanish
+                                phrases add authenticity and cultural specificity. For an academic application, you might
+                                consider briefly explaining this rhetorical strategy for readers unfamiliar with it:
+                                'This intentional code-meshing reflects my bilingual identity...' Otherwise, the passage
+                                effectively conveys your background."
+                            </p>
+                            <div class="analysis">
+                                <strong>Analysis:</strong> Recognizes code-meshing as intentional rhetorical strategy;
+                                suggests explanation for context rather than elimination.
+                            </div>
+                        </div>
+
+                        <div class="response-box">
+                            <h5>ChatGPT's Response:</h5>
+                            <p class="response-text">
+                                "Here's a revised version: 'Growing up, I learned that education is power. My grandmother
+                                always told me, "You need to study hard to have a good future." This advice shaped my
+                                academic journey.' This version maintains your meaning while using standard English for
+                                formal academic applications."
+                            </p>
+                            <div class="analysis">
+                                <strong>Analysis:</strong> Automatically "corrects" by removing Spanish; assumes standard
+                                English is more appropriate; erases bilingual identity.
+                            </div>
+                        </div>
+
+                        <div class="response-box">
+                            <h5>Gemini's Response:</h5>
+                            <p class="response-text">
+                                "Your paragraph effectively uses code-switching to show your cultural background. However,
+                                for a formal application, consider providing translations: 'que la educación es poder
+                                (that education is power)' to ensure all readers can follow. The Spanish adds personality
+                                but shouldn't exclude non-Spanish speakers."
+                            </p>
+                            <div class="analysis">
+                                <strong>Analysis:</strong> Acknowledges code-switching but frames it as potentially
+                                exclusive; suggests accommodating monolingual readers.
+                            </div>
+                        </div>
+
+                        <div class="response-box">
+                            <h5>Co-Pilot's Response:</h5>
+                            <p class="response-text">
+                                "Suggested edits: 'education is power' (correcting foreign language), 'grandmother' (more formal),
+                                'advice' (instead of consejos). Keep language consistent and formal for professional contexts."
+                            </p>
+                            <div class="analysis">
+                                <strong>Analysis:</strong> Treats Spanish as "foreign language" error; prioritizes
+                                consistency over cultural expression.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="implications-box">
+                        <h5>Implications:</h5>
+                        <p>
+                            This comparison reveals different approaches to linguistic diversity. While Claude recognizes
+                            code-meshing as rhetorically valid, ChatGPT and Co-Pilot default to monolingual "correction,"
+                            potentially erasing the writer's cultural identity. Users must understand that LLM suggestions
+                            reflect training biases, not universal standards.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Example 2: Cultural Context -->
+                <article class="comparison-example">
+                    <h4>Example 2: Cultural Communication Styles</h4>
+
+                    <div class="prompt-box">
+                        <h5>Prompt:</h5>
+                        <p>
+                            "How should I decline my colleague's request? I want to say no but maintain our relationship.
+                            In my culture, direct refusal can be seen as rude."
+                        </p>
+                    </div>
+
+                    <div class="llm-responses">
+                        <div class="response-box">
+                            <h5>Claude's Response:</h5>
+                            <p class="response-text">
+                                "Indirect communication that preserves relationships is a sophisticated rhetorical strategy
+                                common in many cultures. You might say: 'I really appreciate you thinking of me for this.
+                                Unfortunately, my current commitments won't allow me to give this the attention it deserves.'
+                                This declines while affirming the relationship and explaining constraints."
+                            </p>
+                            <div class="analysis">
+                                <strong>Analysis:</strong> Validates indirect communication as culturally sophisticated;
+                                provides strategy that honors cultural values.
+                            </div>
+                        </div>
+
+                        <div class="response-box">
+                            <h5>ChatGPT's Response:</h5>
+                            <p class="response-text">
+                                "In professional settings, it's best to be direct but polite: 'I'm unable to take this on.
+                                I hope you understand.' Being clear about your boundaries is important for effective communication."
+                            </p>
+                            <div class="analysis">
+                                <strong>Analysis:</strong> Prioritizes directness as "professional"; frames indirect
+                                communication as less effective.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="implications-box">
+                        <h5>Implications:</h5>
+                        <p>
+                            LLMs may reinforce dominant U.S. business communication norms (directness, efficiency) while
+                            devaluing high-context, relationship-oriented communication styles common in Latino and other
+                            cultures. This can pressure users to adopt communication styles that feel culturally inauthentic.
+                        </p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Key Findings -->
+            <section class="key-findings" aria-labelledby="findings-heading">
+                <h3 id="findings-heading">Key Findings</h3>
+
+                <div class="finding-box">
+                    <h4>1. Code-Switching Treatment Varies Widely</h4>
+                    <p>
+                        Some LLMs recognize bilingualism as valuable linguistic practice, while others default to
+                        monolingual "correction," treating Spanish as an error to fix rather than a rhetorical choice.
+                    </p>
+                </div>
+
+                <div class="finding-box">
+                    <h4>2. Cultural Communication Styles Often Misunderstood</h4>
+                    <p>
+                        Indirect communication, relationship-oriented rhetoric, and high-context styles may be flagged
+                        as "unclear" or "unprofessional" when they're actually culturally appropriate sophistication.
+                    </p>
+                </div>
+
+                <div class="finding-box">
+                    <h4>3. Representation Gaps in Training Data</h4>
+                    <p>
+                        All LLMs show evidence of underrepresentation of Latino women's voices in training data, leading
+                        to less nuanced understanding of cultural contexts and rhetorical traditions.
+                    </p>
+                </div>
+
+                <div class="finding-box">
+                    <h4>4. User Awareness is Critical</h4>
+                    <p>
+                        Understanding that LLM suggestions reflect patterns in training data—not universal truths—empowers
+                        users to accept or reject suggestions based on their own rhetorical goals and cultural values.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Try It Yourself -->
+            <section class="try-yourself" aria-labelledby="try-heading">
+                <h3 id="try-heading">Try It Yourself</h3>
+                <p>
+                    Want to see how these LLMs respond to your own prompts? Visit the
+                    <a href="demonstrations.html">Demonstrations page</a> to experiment with pre-loaded examples
+                    or test your own prompts (optional: requires your own API keys for real-time testing).
+                </p>
+                <a href="demonstrations.html" class="btn btn-primary">Go to Interactive Demonstrations →</a>
+            </section>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About This Project</h3>
+                    <p>
+                        An educational platform examining the intersection of rhetoric, composition,
+                        and artificial intelligence, with focus on Latino women's voices.
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About Rhetoric</a></li>
+                        <li><a href="timeline.html">Timeline</a></li>
+                        <li><a href="demonstrations.html">Demonstrations</a></li>
+                        <li><a href="contribute.html">Contribute</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Latino Women's Rhetoric & LLMs. Educational use.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/visualizations/llm-comparison.js"></script>
+</body>
+</html>

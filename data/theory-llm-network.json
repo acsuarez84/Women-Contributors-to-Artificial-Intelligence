@@ -1,0 +1,323 @@
+{
+  "nodes": [
+    {
+      "id": "grammar",
+      "label": "Grammar as Style & Identity",
+      "type": "theory",
+      "shortDescription": "Grammar reflects identity, culture, and power structures",
+      "fullDescription": "Grammar is not merely a set of rules but a reflection of identity, culture, and power structures. Just as women's technological contributions were historically dismissed when they didn't conform to male-dominated norms, linguistic diversity is often devalued when it deviates from 'Standard Academic English.'",
+      "llmImpact": "LLMs trained predominantly on standardized English flag or 'correct' Latino women's grammatical choices—such as code-switching between English and Spanish—treating culturally authentic expression as error rather than sophisticated rhetorical strategy.",
+      "timelineConnection": "Women's tech contributions were dismissed when they didn't conform to male-dominated norms, just as Latino women's grammatical choices are 'corrected' by LLMs.",
+      "color": [156, 39, 176]
+    },
+    {
+      "id": "transfer",
+      "label": "Knowledge Transfer",
+      "type": "theory",
+      "shortDescription": "How knowledge moves across contexts and communities",
+      "fullDescription": "Transfer theory examines how knowledge and rhetorical strategies move across contexts—from home to school, from Spanish to English, from oral to written traditions. Latino women often excel at transfer, drawing on rich multilingual and multicultural rhetorical traditions.",
+      "llmImpact": "LLMs may not recognize or value transferred strategies from Latino oral storytelling traditions (testimonio, cuentos), misidentifying them as 'off-topic' or 'unorganized' when transferred to academic contexts.",
+      "timelineConnection": "Perpetuates the same erasure that marginalized women's intellectual work throughout computing history—oral traditions and alternative knowledge forms dismissed as invalid.",
+      "color": [156, 39, 176]
+    },
+    {
+      "id": "listening",
+      "label": "Rhetorical Listening",
+      "type": "theory",
+      "shortDescription": "Understanding communication through cultural contexts",
+      "fullDescription": "Rhetorical listening is the practice of standing 'under the discourses that surround us and others' to hear what is not explicitly stated—understanding communication through cultural contexts, histories, and subject positions.",
+      "llmImpact": "An LLM cannot 'listen' rhetorically—it can only pattern-match. When Latino women's discourse patterns are underrepresented in training data, the AI literally cannot hear their rhetorical sophistication.",
+      "timelineConnection": "Just as women's computing contributions required historical recovery because dominant narratives didn't 'listen' to their work, LLMs fail to recognize Latino women's indirect rhetorical strategies.",
+      "color": [156, 39, 176]
+    },
+    {
+      "id": "translingualism",
+      "label": "Translingualism",
+      "type": "theory",
+      "shortDescription": "Strategic use of multilingual repertoires",
+      "fullDescription": "Translingualism challenges the myth of monolingual standard English, celebrating how multilingual speakers strategically draw on their full linguistic repertoires to create meaning. Latino women who code-mesh Spanish and English deploy sophisticated translingual strategies.",
+      "llmImpact": "LLMs typically treat English as the default and suggest 'translating' or removing Spanish phrases, erasing the cultural and rhetorical richness that makes translingual communication powerful.",
+      "timelineConnection": "Mirrors how women's technical innovations were 'translated' or attributed to men to be deemed legitimate—original authorship and cultural context erased in favor of dominant norms.",
+      "color": [156, 39, 176]
+    },
+    {
+      "id": "multimodality",
+      "label": "Multimodality",
+      "type": "theory",
+      "shortDescription": "Meaning-making through multiple modes (text, image, sound, gesture)",
+      "fullDescription": "Multimodality recognizes that meaning-making happens through multiple modes—words, images, sounds, gestures, spatial arrangements—often simultaneously. Latino women's rhetorical traditions are deeply multimodal: combining oral storytelling with visual elements, integrating music and movement.",
+      "llmImpact": "Current LLMs primarily process text, occasionally images, but struggle to understand how Latino women integrate multiple modes to communicate cultural identity.",
+      "timelineConnection": "Parallels how women's holistic contributions to computing—human-computer interaction, documentation, user experience—were undervalued compared to 'pure' coding, which was easier to quantify.",
+      "color": [156, 39, 176]
+    },
+    {
+      "id": "students-right",
+      "label": "Students' Right to Own Language",
+      "type": "theory",
+      "shortDescription": "Right to use own dialects and language varieties",
+      "fullDescription": "This landmark 1974 resolution affirms students' rights to their own dialects and language varieties, challenging linguistic prejudice that equates difference with deficiency. For Latino women, this principle is existential—the right to write and speak in ways that honor their cultural heritage.",
+      "llmImpact": "LLMs trained predominantly on 'Standard English' texts systematically suggest 'corrections' that erase linguistic identities, functioning as automated agents of linguistic colonization.",
+      "timelineConnection": "Echoes how women's contributions to AI and computing were historically 'corrected' or rewritten to conform to male-dominated norms, their original voices erased in favor of what the dominant culture deemed 'proper'.",
+      "color": [156, 39, 176]
+    },
+    {
+      "id": "claude",
+      "label": "Claude",
+      "type": "llm",
+      "shortDescription": "Anthropic's LLM - Constitutional AI approach",
+      "functionality": "Claude uses Constitutional AI trained on harmlessness, honesty, and helpfulness principles. However, its training data predominantly reflects Standard American English and Western rhetorical norms. While Claude can process multiple languages, it tends to default to formal English structures and may suggest 'corrections' to code-switched text.",
+      "rhetoricalImplications": "Claude's 'helpful' corrections may systematically erase Latino women's translingual strategies, treating Spanish-English code-meshing as errors to fix rather than sophisticated rhetorical choices. Its constitutional training, while reducing harmful outputs, does not address the systemic erasure of marginalized rhetorical traditions.",
+      "timelineWomen": "Like how Ada Lovelace's computational insights were dismissed as mere 'poetical science,' Claude's pattern-matching treats Latino women's multimodal, translingual communication as deficient rather than innovative. The very women who contributed to AI's foundations are rendered invisible by systems that don't recognize their rhetorical sophistication.",
+      "color": [255, 152, 0]
+    },
+    {
+      "id": "chatgpt",
+      "label": "ChatGPT",
+      "type": "llm",
+      "shortDescription": "OpenAI's LLM - RLHF training approach",
+      "functionality": "ChatGPT uses Reinforcement Learning from Human Feedback (RLHF), training on vast internet corpora. This means it learns 'preferred' outputs based on human raters' feedback. However, these raters predominantly represent Western, educated, English-speaking demographics, embedding their rhetorical preferences as 'correct.'",
+      "rhetoricalImplications": "ChatGPT's RLHF training reinforces dominant rhetorical norms. When Latino women use testimonio narrative structures or oral storytelling patterns, ChatGPT may rate these as less 'coherent' or 'organized' than Western academic structures. Its helpfulness is calibrated to mainstream English conventions.",
+      "timelineWomen": "Grace Hopper created COBOL to make programming accessible through natural language, yet ChatGPT's 'natural' language excludes the multilingual, multimodal communication of Latino women. The democratizing vision of women pioneers is undermined by systems trained on homogenized preferences.",
+      "color": [255, 152, 0]
+    },
+    {
+      "id": "gemini",
+      "label": "Gemini",
+      "type": "llm",
+      "shortDescription": "Google's multimodal LLM",
+      "functionality": "Gemini is designed for multimodal understanding—text, images, audio, video. This theoretically makes it better suited for Latino women's multimodal rhetorical traditions. However, its training data and evaluation metrics still privilege Western rhetorical structures. Its multimodality is technical, not cultural.",
+      "rhetoricalImplications": "While Gemini can process images alongside text, it doesn't understand how Latino women use visual elements, gestures, and spatial arrangements as integral to meaning-making. Gemini's multimodality serves efficiency, not cultural expression. It can see a photograph but not 'read' the rhetorical work of embodied storytelling.",
+      "timelineWomen": "Radia Perlman invented the spanning tree protocol, enabling network resilience through distributed intelligence. Yet Gemini's multimodal capabilities don't recognize distributed meaning-making across modes in Latino women's rhetoric—centralizing interpretation through dominant cultural lenses.",
+      "color": [255, 152, 0]
+    },
+    {
+      "id": "copilot",
+      "label": "GitHub Co-Pilot",
+      "type": "llm",
+      "shortDescription": "Microsoft's code-generation LLM",
+      "functionality": "GitHub Copilot is trained specifically on code repositories and technical documentation. Its domain is narrower but its implications are profound: it learns from a codebase overwhelmingly created by men, often with inadequate documentation of women's contributions. Copilot generates code based on these patterns.",
+      "rhetoricalImplications": "Copilot perpetuates the technical writing style and code commenting practices of male-dominated open source. When Latino women developers use more verbose, explanatory, or community-oriented documentation styles, Copilot's suggestions push toward terse, assumed-knowledge patterns that exclude.",
+      "timelineWomen": "Margaret Hamilton's insistence on 'software engineering' as rigorous discipline required extensive documentation and validation. Yet Copilot trains on repos where women's documentation work is often uncredited or deemed 'non-technical.' Latino women's collaborative, explanatory coding practices are erased from what Copilot learns as 'good code.'",
+      "color": [255, 152, 0]
+    }
+  ],
+  "edges": [
+    {
+      "source": "transfer",
+      "target": "listening",
+      "type": "complementary",
+      "relationship": "Both theories require understanding context and cultural background. Transfer depends on recognizing how knowledge moves across contexts, while rhetorical listening provides the practice of hearing what's culturally embedded.",
+      "womenImplication": "Women's tech contributions often involved cross-domain transfer (math to computing, linguistics to programming) that required rhetorical listening to bridge communities."
+    },
+    {
+      "source": "translingualism",
+      "target": "multimodality",
+      "type": "complementary",
+      "relationship": "Both celebrate diverse forms of expression. Translingualism defends linguistic diversity while multimodality expands to include visual, auditory, and gestural modes. Together they honor how Latino women communicate.",
+      "womenImplication": "Women in computing often used diagrams, visual representations, and collaborative explanations—multimodal approaches now obscured by text-centric LLM training."
+    },
+    {
+      "source": "translingualism",
+      "target": "students-right",
+      "type": "complementary",
+      "relationship": "Both defend the legitimacy of linguistic diversity. Students' Right (1974) established the principle, while translingualism (2010s) provides the pedagogical and theoretical framework for enacting it.",
+      "womenImplication": "Just as women's 'different' approaches to computing were dismissed, Latino women's translingual practices are delegitimized despite being theoretically protected."
+    },
+    {
+      "source": "grammar",
+      "target": "transfer",
+      "type": "complementary",
+      "relationship": "Grammar patterns transfer across contexts. Understanding how grammatical choices reflect identity helps us see how rhetorical strategies transfer from home languages to academic English.",
+      "womenImplication": "Women programmers transferred mathematical rigor into code structure, but LLMs don't recognize analogous transfers from Latino women's oral traditions."
+    },
+    {
+      "source": "listening",
+      "target": "students-right",
+      "type": "complementary",
+      "relationship": "Rhetorical listening requires respecting students' right to their own language. You cannot truly 'listen' if you're correcting away linguistic identity.",
+      "womenImplication": "Historical failure to 'listen' to women's contributions parallels LLMs' failure to recognize Latino women's linguistic rights."
+    },
+    {
+      "source": "grammar",
+      "target": "students-right",
+      "type": "tension",
+      "relationship": "Tension between prescriptive grammar (enforcing standard) and students' right to own language (defending diversity). This is the central conflict in composition studies and a primary site where LLMs cause harm.",
+      "womenImplication": "Women's code was judged by male-defined standards of 'elegance'; Latino women's language is judged by white-defined standards of 'correctness.'"
+    },
+    {
+      "source": "grammar",
+      "target": "translingualism",
+      "type": "tension",
+      "relationship": "Prescriptive grammar enforces monolingual norms, while translingualism celebrates code-meshing and multilingual fluidity. These approaches are fundamentally at odds.",
+      "womenImplication": "The 'translation' of women's innovations into male-authored narratives mirrors the 'correction' of translingual text into Standard English."
+    },
+    {
+      "source": "claude",
+      "target": "grammar",
+      "type": "llm-failure",
+      "failure": "Claude enforces Standard English grammar, flagging code-switching as error. Its 'constitutional' approach doesn't question whose grammatical rules count as constitutional.",
+      "womenImpact": "Latino women's strategic code-switching is 'helpfully' corrected, erasing sophisticated rhetorical choices."
+    },
+    {
+      "source": "claude",
+      "target": "listening",
+      "type": "llm-failure",
+      "failure": "Claude cannot practice rhetorical listening—it pattern-matches but doesn't understand cultural context or historical subject positions.",
+      "womenImpact": "Latino women's indirect discourse strategies, culturally-specific persuasion, and community-oriented rhetoric go unrecognized."
+    },
+    {
+      "source": "claude",
+      "target": "translingualism",
+      "type": "llm-failure",
+      "failure": "Claude treats English as default, suggesting removal or translation of Spanish phrases rather than recognizing translingual sophistication.",
+      "womenImpact": "Latino women's bilingual expertise is reduced to 'language barrier' that needs fixing."
+    },
+    {
+      "source": "claude",
+      "target": "students-right",
+      "type": "llm-failure",
+      "failure": "Claude's 'corrections' systematically erase linguistic identity, violating students' right to their own language.",
+      "womenImpact": "Automated linguistic colonization—Latino women's voices rewritten to conform to dominant norms."
+    },
+    {
+      "source": "claude",
+      "target": "multimodality",
+      "type": "llm-failure",
+      "failure": "Claude is primarily text-based, struggling to integrate how Latino women use visual, spatial, and embodied communication.",
+      "womenImpact": "Multimodal storytelling traditions reduced to 'needs better organization' text critiques."
+    },
+    {
+      "source": "claude",
+      "target": "transfer",
+      "type": "llm-failure",
+      "failure": "Claude doesn't recognize when Latino oral traditions transfer to academic contexts, flagging them as off-topic or poorly structured.",
+      "womenImpact": "Rich knowledge transfer from community storytelling dismissed as academic deficiency."
+    },
+    {
+      "source": "chatgpt",
+      "target": "grammar",
+      "type": "llm-failure",
+      "failure": "ChatGPT's RLHF training embeds dominant grammatical preferences as 'helpful' responses, marginalizing linguistic diversity.",
+      "womenImpact": "Latino women's grammatical agency is overridden by crowd-sourced normativity."
+    },
+    {
+      "source": "chatgpt",
+      "target": "listening",
+      "type": "llm-failure",
+      "failure": "ChatGPT optimizes for engagement, not cultural understanding. It cannot listen beneath surface patterns.",
+      "womenImpact": "Culturally-specific rhetorical strategies read as 'unclear' or 'needs revision.'"
+    },
+    {
+      "source": "chatgpt",
+      "target": "translingualism",
+      "type": "llm-failure",
+      "failure": "ChatGPT's training prioritizes English fluency, treating code-meshing as transitional rather than sophisticated.",
+      "womenImpact": "Bilingual excellence reduced to 'English language learner' status."
+    },
+    {
+      "source": "chatgpt",
+      "target": "students-right",
+      "type": "llm-failure",
+      "failure": "RLHF learns 'preferred' outputs from demographics that don't represent Latino women's linguistic rights.",
+      "womenImpact": "Democratic-sounding 'human feedback' actually enforces hegemonic language norms."
+    },
+    {
+      "source": "chatgpt",
+      "target": "multimodality",
+      "type": "llm-failure",
+      "failure": "ChatGPT is text-only, unable to engage with multimodal meaning-making central to Latino women's rhetoric.",
+      "womenImpact": "Embodied, visual, and spatial dimensions of communication entirely absent."
+    },
+    {
+      "source": "chatgpt",
+      "target": "transfer",
+      "type": "llm-failure",
+      "failure": "ChatGPT doesn't recognize alternative knowledge structures transferring into academic contexts.",
+      "womenImpact": "Testimonio, cuentos, and oral history dismissed as 'anecdotal' rather than rigorous knowledge."
+    },
+    {
+      "source": "gemini",
+      "target": "grammar",
+      "type": "llm-failure",
+      "failure": "Despite multimodality, Gemini still enforces Standard English grammar rules across all modes.",
+      "womenImpact": "Visual or audio input containing code-switching still flagged for 'correction.'"
+    },
+    {
+      "source": "gemini",
+      "target": "listening",
+      "type": "llm-failure",
+      "failure": "Gemini's multimodal processing is technical, not cultural—it can't listen rhetorically across modes.",
+      "womenImpact": "Sees images but doesn't understand culturally-embedded visual rhetoric."
+    },
+    {
+      "source": "gemini",
+      "target": "translingualism",
+      "type": "llm-failure",
+      "failure": "Gemini's multilingual capabilities still privilege English, treating other languages as 'foreign' inputs to translate.",
+      "womenImpact": "Code-meshing across modalities read as confusion rather than sophistication."
+    },
+    {
+      "source": "gemini",
+      "target": "students-right",
+      "type": "llm-failure",
+      "failure": "Multimodal inputs don't protect linguistic rights—Gemini still 'corrects' diverse language varieties.",
+      "womenImpact": "More modes of erasure: Latino women's linguistic identity overridden in text, speech, and visual input."
+    },
+    {
+      "source": "gemini",
+      "target": "multimodality",
+      "type": "llm-failure",
+      "failure": "Gemini's multimodality serves efficiency, not cultural expression. It doesn't understand integrated meaning-making.",
+      "womenImpact": "Latino women's holistic communication strategies fragmented into discrete 'inputs' to process separately."
+    },
+    {
+      "source": "gemini",
+      "target": "transfer",
+      "type": "llm-failure",
+      "failure": "Gemini doesn't recognize cross-modal transfer of rhetorical strategies from Latino cultural traditions.",
+      "womenImpact": "Oral storytelling patterns transferring to visual narratives dismissed as 'inconsistent structure.'"
+    },
+    {
+      "source": "copilot",
+      "target": "grammar",
+      "type": "llm-failure",
+      "failure": "Copilot enforces terse, assumption-heavy code commenting style, marginalizing verbose or explanatory approaches.",
+      "womenImpact": "Latino women's community-oriented documentation dismissed as 'over-commented' code."
+    },
+    {
+      "source": "copilot",
+      "target": "listening",
+      "type": "llm-failure",
+      "failure": "Copilot trained on repos where women's contributions often lack attribution—it can't listen to voices that were silenced.",
+      "womenImpact": "Women's collaborative, explanatory coding practices invisible in training data."
+    },
+    {
+      "source": "copilot",
+      "target": "translingualism",
+      "type": "llm-failure",
+      "failure": "Copilot's code is English-centric in variable naming, comments, and documentation style.",
+      "womenImpact": "Bilingual developers' translingual code practices overridden with English-only suggestions."
+    },
+    {
+      "source": "copilot",
+      "target": "students-right",
+      "type": "llm-failure",
+      "failure": "Copilot suggests 'standard' coding style without respecting diverse technical communication practices.",
+      "womenImpact": "Latino women's right to code in culturally-aligned ways erased by 'best practice' automation."
+    },
+    {
+      "source": "copilot",
+      "target": "multimodality",
+      "type": "llm-failure",
+      "failure": "Copilot is text-based code generation, doesn't engage with visual documentation, diagrams, or collaborative whiteboarding.",
+      "womenImpact": "Women's multimodal technical communication rendered irrelevant to what counts as 'coding.'"
+    },
+    {
+      "source": "copilot",
+      "target": "transfer",
+      "type": "llm-failure",
+      "failure": "Copilot doesn't recognize when domain knowledge from other fields transfers into code (e.g., education, social work, community organizing).",
+      "womenImpact": "Latino women's interdisciplinary expertise dismissed; only CS-to-CS knowledge transfer recognized."
+    }
+  ]
+}

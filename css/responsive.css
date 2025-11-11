@@ -66,7 +66,8 @@
   /* Grids */
   .intro-grid,
   .preview-grid,
-  .concept-grid {
+  .concept-grid,
+  .theory-list {
     grid-template-columns: 1fr;
   }
 

@@ -16,7 +16,8 @@
 
 .control-group {
   flex: 1;
-  min-width: 200px;
+  min-width: 250px;
+  margin-bottom: var(--spacing-md);
 }
 
 .control-group h3 {
@@ -26,15 +27,19 @@
   color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  white-space: nowrap;
 }
 
 .button-group {
   display: flex;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
 }
 
 .button-group .btn {
-  flex: 1;
+  flex: 1 1 auto;
+  min-width: max-content;
+  white-space: nowrap;
 }
 
 .button-group .btn.active {

@@ -42,26 +42,7 @@
                 </p>
             </header>
 
-            <!-- Mode Selection -->
-            <section class="mode-selection" aria-labelledby="mode-heading">
-                <h3 id="mode-heading">Choose Your Experience</h3>
-                <div class="mode-cards">
-                    <article class="mode-card active" id="mode-prerecorded">
-                        <h4>📚 Pre-recorded Examples</h4>
-                        <p>View curated examples showing LLM responses (no API key needed)</p>
-                        <span class="badge">Free • No setup required</span>
-                    </article>
-
-                    <article class="mode-card" id="mode-live">
-                        <h4>🔬 Live Experimentation</h4>
-                        <p>Test your own prompts with real-time LLM responses (requires API keys)</p>
-                        <span class="badge">Advanced • API keys needed</span>
-                    </article>
-                </div>
-            </section>
-
-            <!-- Pre-recorded Demonstrations (Default View) -->
-            <div id="prerecorded-content">
+            <!-- Pre-recorded Demonstrations -->
                 <!-- Demo 1: Interactive LLM Comparison -->
                 <section class="demo-section" aria-labelledby="demo1-heading">
                     <h3 id="demo1-heading">Demo 1: Interactive LLM Comparison</h3>
@@ -256,91 +237,100 @@
                         <!-- Content loaded by JavaScript -->
                     </div>
                 </section>
-            </div>
 
-            <!-- Live Experimentation (Hidden by default) -->
-            <div id="live-content" hidden>
-                <section class="api-setup" aria-labelledby="api-setup-heading">
-                    <h3 id="api-setup-heading">Live API Experimentation Setup</h3>
+            <!-- Live Experimentation Section -->
+            <section class="live-experiment-section" aria-labelledby="live-experiment-heading">
+                <h3 id="live-experiment-heading">Live Experimentation</h3>
+                <p class="lead">
+                    Test your own prompts with real LLMs and get instant theory-based analysis (no API keys needed!)
+                </p>
 
-                    <div class="callout">
-                        <h4>How This Works</h4>
-                        <p>
-                            To test prompts in real-time, you'll need your own API keys. These are stored only in your
-                            browser (localStorage) and never sent to our servers. You can get free trial credits from:
-                        </p>
-                        <ul>
-                            <li><a href="https://console.anthropic.com" target="_blank" rel="noopener">Anthropic (Claude)</a> - Free trial credits available</li>
-                            <li><a href="https://platform.openai.com/signup" target="_blank" rel="noopener">OpenAI (ChatGPT)</a> - $5 free credits for new accounts</li>
-                            <li><a href="https://makersuite.google.com" target="_blank" rel="noopener">Google (Gemini)</a> - Free tier available</li>
-                        </ul>
+                <div class="callout callout-info">
+                    <h4>How This Works</h4>
+                    <ol>
+                        <li>Enter your custom prompt below</li>
+                        <li>Select which rhetoric theories to analyze (you can change these later)</li>
+                        <li>Click "Try with LLMs" to automatically open all 4 LLM sites in new tabs</li>
+                        <li>Copy each LLM's response and paste them all into the response box</li>
+                        <li>See instant comparative analysis with scores and explanations</li>
+                    </ol>
+                </div>
+
+                <!-- Theory Selection -->
+                <div class="theory-selection">
+                    <h4>Select Theories to Analyze:</h4>
+                    <div class="theory-checkboxes">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="theory" value="grammar">
+                            Grammar as Style & Identity
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="theory" value="transfer">
+                            Knowledge Transfer
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="theory" value="rhetorical_listening">
+                            Rhetorical Listening
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="theory" value="translingualism">
+                            Translingualism
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="theory" value="multimodality">
+                            Multimodality
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="theory" value="srtol">
+                            Students' Right to Own Language
+                        </label>
                     </div>
+                </div>
 
-                    <form id="api-keys-form" class="api-form">
-                        <div class="form-group">
-                            <label for="claude-key">
-                                Claude API Key (optional)
-                                <input type="password" id="claude-key" placeholder="sk-ant-...">
-                            </label>
-                        </div>
+                <!-- Custom Prompt Input -->
+                <div class="form-group">
+                    <label for="custom-prompt">
+                        <strong>Your Custom Prompt:</strong>
+                        <textarea
+                            id="custom-prompt"
+                            rows="4"
+                            placeholder="Example: How should I respond when reviewers say my code-switching is 'inconsistent' when it's actually intentional bilingual rhetoric?"
+                        ></textarea>
+                    </label>
+                </div>
 
-                        <div class="form-group">
-                            <label for="openai-key">
-                                OpenAI API Key (optional)
-                                <input type="password" id="openai-key" placeholder="sk-...">
-                            </label>
-                        </div>
+                <button id="try-llms-btn" class="btn btn-primary btn-large" disabled>
+                    🚀 Try with LLMs (Opens 4 Tabs)
+                </button>
 
-                        <div class="form-group">
-                            <label for="gemini-key">
-                                Gemini API Key (optional)
-                                <input type="password" id="gemini-key" placeholder="AIza...">
-                            </label>
-                        </div>
+                <!-- LLM Cards Container (shown after clicking Try LLMs) -->
+                <div id="llm-cards-container" class="llm-cards-section" style="display: none;">
+                    <!-- Cards will be inserted here by JavaScript -->
+                </div>
 
-                        <button type="submit" class="btn btn-primary">Save Keys (localStorage only)</button>
-                        <button type="button" id="clear-keys" class="btn btn-secondary">Clear All Keys</button>
-                    </form>
+                <!-- Instructions Box (shown after clicking Try LLMs) -->
+                <div id="instructions-box" style="display: none;">
+                    <!-- Instructions will be inserted here by JavaScript -->
+                </div>
 
-                    <div class="api-status" id="api-status">
-                        <!-- Status messages appear here -->
-                    </div>
-                </section>
+                <!-- Response Textarea -->
+                <div class="form-group">
+                    <label for="response-textarea">
+                        <strong>Paste All LLM Responses Here:</strong>
+                        <small>Label each response like "Claude: [response text]" or "ChatGPT: [response text]"</small>
+                        <textarea
+                            id="response-textarea"
+                            rows="12"
+                            placeholder="Example format:&#10;&#10;Claude: Your code-switching demonstrates sophisticated translingual practice...&#10;&#10;ChatGPT: While code-switching can be intentional, consider your audience...&#10;&#10;Gemini: Bilingual rhetoric is a valid rhetorical choice...&#10;&#10;Co-Pilot: For consistency, you should choose one language..."
+                        ></textarea>
+                    </label>
+                </div>
 
-                <section class="live-demo" aria-labelledby="live-demo-heading">
-                    <h3 id="live-demo-heading">Test Your Own Prompts</h3>
-
-                    <form id="live-prompt-form">
-                        <div class="form-group">
-                            <label for="live-prompt">
-                                Enter your prompt:
-                                <textarea
-                                    id="live-prompt"
-                                    rows="5"
-                                    placeholder="Example: How should I respond to feedback that my writing style is 'too informal' when I'm intentionally using my cultural voice?"
-                                ></textarea>
-                            </label>
-                        </div>
-
-                        <div class="form-group">
-                            <label>
-                                Select LLMs to query:
-                                <div class="checkbox-group">
-                                    <label><input type="checkbox" name="llm" value="claude" checked> Claude</label>
-                                    <label><input type="checkbox" name="llm" value="openai"> ChatGPT</label>
-                                    <label><input type="checkbox" name="llm" value="gemini"> Gemini</label>
-                                </div>
-                            </label>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Send Prompt</button>
-                    </form>
-
-                    <div id="live-results" class="live-results">
-                        <!-- Results appear here -->
-                    </div>
-                </section>
-            </div>
+                <!-- Analysis Container -->
+                <div id="analysis-container" class="analysis-container" style="display: none;">
+                    <!-- Analysis results will be inserted here by JavaScript -->
+                </div>
+            </section>
         </div>
     </main>
 
@@ -374,6 +364,8 @@
     <script src="../js/components/interactive-demo.js"></script>
     <script src="../js/data/example-prompts.js"></script>
     <script src="../js/components/comparison-demo.js"></script>
-    <script src="../js/api/llm-apis.js"></script>
+    <script src="../js/analysis/keyword-dictionaries.js"></script>
+    <script src="../js/analysis/theory-analyzer.js"></script>
+    <script src="../js/components/live-experiment.js"></script>
 </body>
 </html>

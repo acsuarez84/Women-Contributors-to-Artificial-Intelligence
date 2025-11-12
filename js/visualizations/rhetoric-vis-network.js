@@ -184,8 +184,8 @@
                 color: {color: '#e74c3c'},
                 width: 3,
                 dashes: [5, 3],
-                label: 'Directly challenges prescriptive grammar by rejecting monolingual standards and affirming linguistic diversity',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Directly challenges prescriptive grammar\nby rejecting monolingual standards\nand affirming linguistic diversity',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'grammar',
@@ -194,8 +194,8 @@
                 color: {color: '#e74c3c'},
                 width: 3,
                 dashes: [5, 3],
-                label: 'Fundamentally rejects grammar as fixed, viewing language practices as fluid and negotiated',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Fundamentally rejects grammar as\nfixed, viewing language practices\nas fluid and negotiated',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'listening',
@@ -203,8 +203,8 @@
                 arrows: 'to,from',
                 color: {color: '#27ae60'},
                 width: 3,
-                label: 'Both emphasize ethical imperative to value and understand different language practices across cultures',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Both emphasize ethical imperative\nto value and understand\ndifferent language practices across\ncultures',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'listening',
@@ -212,8 +212,8 @@
                 arrows: 'to,from',
                 color: {color: '#27ae60'},
                 width: 3,
-                label: 'Both promote conscious cross-cultural understanding through engagement with linguistic differences',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Both promote conscious cross-cultural\nunderstanding through engagement with\nlinguistic differences',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'listening',
@@ -221,8 +221,8 @@
                 arrows: 'to',
                 color: {color: '#3498db'},
                 width: 2,
-                label: 'Rhetorical listening skills transfer and adapt across different rhetorical contexts and situations',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Rhetorical listening skills transfer\nand adapt across different\nrhetorical contexts and situations',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'srtol',
@@ -230,8 +230,8 @@
                 arrows: 'to,from',
                 color: {color: '#9b59b6'},
                 width: 4,
-                label: 'Theoretical evolution from rights-based to resource-based framing of language diversity',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Theoretical evolution from rights-based\nto resource-based framing of\nlanguage diversity',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'srtol',
@@ -239,8 +239,8 @@
                 arrows: 'to',
                 color: {color: '#3498db'},
                 width: 2,
-                label: 'Student home languages become resources that transfer to and enrich academic writing contexts',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Student home languages become\nresources that transfer to\nand enrich academic writing\ncontexts',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'transfer',
@@ -248,8 +248,8 @@
                 arrows: 'to,from',
                 color: {color: '#27ae60'},
                 width: 3,
-                label: 'Language practices and strategies transfer across linguistic and cultural boundaries',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Language practices and strategies\ntransfer across linguistic and\ncultural boundaries',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'transfer',
@@ -257,8 +257,8 @@
                 arrows: 'to,from',
                 color: {color: '#27ae60'},
                 width: 3,
-                label: 'Multimodal composing skills and knowledge transfer across different media and contexts',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Multimodal composing skills and\nknowledge transfer across different\nmedia and contexts',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'transfer',
@@ -267,8 +267,8 @@
                 color: {color: '#95a5a6'},
                 width: 2,
                 dashes: [5, 5],
-                label: 'Shows that grammatical knowledge does not simply move unchanged across different contexts',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Shows that grammatical knowledge\ndoes not simply move\nunchanged across different contexts',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'translingualism',
@@ -276,8 +276,8 @@
                 arrows: 'to,from',
                 color: {color: '#27ae60'},
                 width: 3,
-                label: 'Both theories recognize multiple resources available for creating meaning beyond single modalities',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Both theories recognize multiple\nresources available for creating\nmeaning beyond single modalities',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'multimodality',
@@ -285,8 +285,8 @@
                 arrows: 'to',
                 color: {color: '#f39c12'},
                 width: 2,
-                label: 'Expands grammar concept to include visual, spatial, and gestural meaning-making systems',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Expands grammar concept to\ninclude visual, spatial, and\ngestural meaning-making systems',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'multimodality',
@@ -294,8 +294,8 @@
                 arrows: 'from',
                 color: {color: '#27ae60'},
                 width: 2,
-                label: 'Multimodal communication expands student rights to include diverse semiotic modes of expression',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Multimodal communication expands student\nrights to include diverse\nsemiotic modes of expression',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             },
             {
                 from: 'multimodality',
@@ -303,34 +303,34 @@
                 arrows: 'to,from',
                 color: {color: '#3498db'},
                 width: 2,
-                label: 'Rhetorical listening extends beyond verbal communication to include visual, spatial, and gestural modes',
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                label: 'Rhetorical listening extends beyond\nverbal communication to include\nvisual, spatial, and gestural\nmodes',
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             }
         ]);
 
         // Add woman-to-theory connections with unique explanations
         const womanTheoryConnections = {
-            'ada-lovelace-transfer': {from: 'ada-lovelace', to: 'transfer', label: "Lovelace transferred mathematical concepts into computational thinking, pioneering algorithmic logic that crossed disciplinary boundaries"},
-            'ada-lovelace-multimodality': {from: 'ada-lovelace', to: 'multimodality', label: "Her extensive annotations and diagrams exemplify multimodal technical communication, combining text, notation, and visual representation"},
-            'grace-hopper-translingualism': {from: 'grace-hopper', to: 'translingualism', label: "Hopper's COBOL embodies translingual principles by making code readable across technical and non-technical communities"},
-            'grace-hopper-grammar': {from: 'grace-hopper', to: 'grammar', label: "She established grammatical conventions for programming languages, creating syntax rules that balanced structure with accessibility"},
-            'grace-hopper-transfer': {from: 'grace-hopper', to: 'transfer', label: "Her compiler work demonstrated how natural language concepts transfer into machine-readable instructions"},
-            'katherine-johnson-listening': {from: 'katherine-johnson', to: 'listening', label: "Johnson practiced rhetorical listening by understanding unspoken technical needs and translating them into precise mathematical solutions"},
-            'katherine-johnson-srtol': {from: 'katherine-johnson', to: 'srtol', label: "Her erasure from NASA narratives exemplifies the need for recognizing all contributors' intellectual languages and rights to recognition"},
-            'margaret-hamilton-grammar': {from: 'margaret-hamilton', to: 'grammar', label: "Hamilton established rigorous grammatical standards for software engineering, legitimizing code as a formal engineering language"},
-            'margaret-hamilton-multimodality': {from: 'margaret-hamilton', to: 'multimodality', label: "Her extensive documentation combined code, diagrams, flowcharts, and written explanations in multimodal engineering practice"},
-            'margaret-hamilton-srtol': {from: 'margaret-hamilton', to: 'srtol', label: "She fought for software developers' right to be recognized as engineers, validating their technical language and intellectual contributions"},
-            'radia-perlman-transfer': {from: 'radia-perlman', to: 'transfer', label: "Perlman transferred biological concepts (trees, roots, spanning) into network engineering, demonstrating cross-domain knowledge application"},
-            'radia-perlman-multimodality': {from: 'radia-perlman', to: 'multimodality', label: "Her playful, accessible technical writing combines poetry, diagrams, and prose, challenging gatekeeping technical communication norms"},
-            'fei-fei-li-listening': {from: 'fei-fei-li', to: 'listening', label: "Li's work on human-centered AI demands rhetorical listening to diverse communities about dataset bias and representation"},
-            'fei-fei-li-multimodality': {from: 'fei-fei-li', to: 'multimodality', label: "ImageNet revolutionized how machines process multimodal visual information, though it perpetuated existing visual biases"},
-            'fei-fei-li-srtol': {from: 'fei-fei-li', to: 'srtol', label: "Her advocacy for inclusive AI echoes students' rights arguments—both assert the legitimacy of diverse voices against dominant norms"},
-            'joy-buolamwini-listening': {from: 'joy-buolamwini', to: 'listening', label: "Buolamwini's research requires rhetorical listening to marginalized communities' lived experiences with biased AI systems"},
-            'joy-buolamwini-srtol': {from: 'joy-buolamwini', to: 'srtol', label: "She exposes how AI systems fail to recognize darker-skinned faces, paralleling how institutions fail to recognize marginalized voices"},
-            'joy-buolamwini-translingualism': {from: 'joy-buolamwini', to: 'translingualism', label: "Her work reveals how AI systems privilege dominant visual 'languages' while erasing culturally-specific modes of expression"},
-            'timnit-gebru-listening': {from: 'timnit-gebru', to: 'listening', label: "Gebru's 'Stochastic Parrots' demands we listen to how LLMs perpetuate linguistic and cultural bias at scale"},
-            'timnit-gebru-srtol': {from: 'timnit-gebru', to: 'srtol', label: "Her silencing by Google mirrors institutional suppression of those who assert their right to critique technological hegemony"},
-            'timnit-gebru-grammar': {from: 'timnit-gebru', to: 'grammar', label: "She reveals how LLM training imposes dominant grammatical patterns, erasing the legitimacy of diverse linguistic practices"}
+            'ada-lovelace-transfer': {from: 'ada-lovelace', to: 'transfer', label: "Lovelace transferred mathematical concepts\ninto computational thinking, pioneering\nalgorithmic logic that crossed\ndisciplinary boundaries"},
+            'ada-lovelace-multimodality': {from: 'ada-lovelace', to: 'multimodality', label: "Her extensive annotations and\ndiagrams exemplify multimodal technical\ncommunication, combining text, notation,\nand visual representation"},
+            'grace-hopper-translingualism': {from: 'grace-hopper', to: 'translingualism', label: "Hopper's COBOL embodies translingual\nprinciples by making code\nreadable across technical and\nnon-technical communities"},
+            'grace-hopper-grammar': {from: 'grace-hopper', to: 'grammar', label: "She established grammatical conventions\nfor programming languages, creating\nsyntax rules that balanced\nstructure with accessibility"},
+            'grace-hopper-transfer': {from: 'grace-hopper', to: 'transfer', label: "Her compiler work demonstrated\nhow natural language concepts\ntransfer into machine-readable instructions"},
+            'katherine-johnson-listening': {from: 'katherine-johnson', to: 'listening', label: "Johnson practiced rhetorical listening\nby understanding unspoken technical\nneeds and translating them\ninto precise mathematical solutions"},
+            'katherine-johnson-srtol': {from: 'katherine-johnson', to: 'srtol', label: "Her erasure from NASA\nnarratives exemplifies the need\nfor recognizing all contributors'\nintellectual languages and rights\nto recognition"},
+            'margaret-hamilton-grammar': {from: 'margaret-hamilton', to: 'grammar', label: "Hamilton established rigorous grammatical\nstandards for software engineering,\nlegitimizing code as a\nformal engineering language"},
+            'margaret-hamilton-multimodality': {from: 'margaret-hamilton', to: 'multimodality', label: "Her extensive documentation combined\ncode, diagrams, flowcharts, and\nwritten explanations in multimodal\nengineering practice"},
+            'margaret-hamilton-srtol': {from: 'margaret-hamilton', to: 'srtol', label: "She fought for software\ndevelopers' right to be\nrecognized as engineers, validating\ntheir technical language and\nintellectual contributions"},
+            'radia-perlman-transfer': {from: 'radia-perlman', to: 'transfer', label: "Perlman transferred biological concepts\n(trees, roots, spanning) into\nnetwork engineering, demonstrating cross-domain\nknowledge application"},
+            'radia-perlman-multimodality': {from: 'radia-perlman', to: 'multimodality', label: "Her playful, accessible technical\nwriting combines poetry, diagrams,\nand prose, challenging gatekeeping\ntechnical communication norms"},
+            'fei-fei-li-listening': {from: 'fei-fei-li', to: 'listening', label: "Li's work on human-centered\nAI demands rhetorical listening\nto diverse communities about\ndataset bias and representation"},
+            'fei-fei-li-multimodality': {from: 'fei-fei-li', to: 'multimodality', label: "ImageNet revolutionized how machines\nprocess multimodal visual information,\nthough it perpetuated existing\nvisual biases"},
+            'fei-fei-li-srtol': {from: 'fei-fei-li', to: 'srtol', label: "Her advocacy for inclusive\nAI echoes students' rights\narguments—both assert the legitimacy\nof diverse voices against\ndominant norms"},
+            'joy-buolamwini-listening': {from: 'joy-buolamwini', to: 'listening', label: "Buolamwini's research requires rhetorical\nlistening to marginalized communities'\nlived experiences with biased\nAI systems"},
+            'joy-buolamwini-srtol': {from: 'joy-buolamwini', to: 'srtol', label: "She exposes how AI\nsystems fail to recognize\ndarker-skinned faces, paralleling how\ninstitutions fail to recognize\nmarginalized voices"},
+            'joy-buolamwini-translingualism': {from: 'joy-buolamwini', to: 'translingualism', label: "Her work reveals how\nAI systems privilege dominant\nvisual 'languages' while erasing\nculturally-specific modes of expression"},
+            'timnit-gebru-listening': {from: 'timnit-gebru', to: 'listening', label: "Gebru's 'Stochastic Parrots' demands\nwe listen to how\nLLMs perpetuate linguistic and\ncultural bias at scale"},
+            'timnit-gebru-srtol': {from: 'timnit-gebru', to: 'srtol', label: "Her silencing by Google\nmirrors institutional suppression of\nthose who assert their\nright to critique technological\nhegemony"},
+            'timnit-gebru-grammar': {from: 'timnit-gebru', to: 'grammar', label: "She reveals how LLM\ntraining imposes dominant grammatical\npatterns, erasing the legitimacy\nof diverse linguistic practices"}
         };
 
         Object.values(womanTheoryConnections).forEach(conn => {
@@ -341,31 +341,31 @@
                 width: 2,
                 dashes: [5, 3],
                 label: conn.label,
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             });
         });
 
         // Add LLM-to-woman erasure connections with unique explanations
         const llmWomanConnections = {
-            'claude-ada-lovelace': {from: 'claude', to: 'ada-lovelace', label: "Claude's training data underrepresents women's foundational computing work, often attributing Lovelace's algorithm to Babbage"},
-            'claude-katherine-johnson': {from: 'claude', to: 'katherine-johnson', label: "Claude lacks contextual understanding to recognize how Johnson's calculations required cross-cultural technical translation"},
-            'claude-margaret-hamilton': {from: 'claude', to: 'margaret-hamilton', label: "Claude perpetuates narratives that minimize Hamilton's software engineering leadership, focusing on astronauts over ground control"},
-            'claude-fei-fei-li': {from: 'claude', to: 'fei-fei-li', label: "Claude fails to connect Li's ImageNet work to broader implications about bias in its own training datasets"},
-            'claude-joy-buolamwini': {from: 'claude', to: 'joy-buolamwini', label: "Claude cannot engage with Buolamwini's critiques of AI bias because it lacks capacity for genuine self-reflection"},
-            'claude-timnit-gebru': {from: 'claude', to: 'timnit-gebru', label: "Claude was trained during the controversy of Gebru's firing, yet its training process embodies the problems she exposed"},
-            'chatgpt-ada-lovelace': {from: 'chatgpt', to: 'ada-lovelace', label: "ChatGPT often presents Lovelace as Babbage's assistant rather than independent mathematician and pioneering programmer"},
-            'chatgpt-grace-hopper': {from: 'chatgpt', to: 'grace-hopper', label: "ChatGPT's code suggestions favor terse, exclusive styles over Hopper's accessible, documentation-rich approach"},
-            'chatgpt-fei-fei-li': {from: 'chatgpt', to: 'fei-fei-li', label: "ChatGPT uses ImageNet-influenced models while failing to acknowledge Li's warnings about perpetuating dataset bias"},
-            'chatgpt-joy-buolamwini': {from: 'chatgpt', to: 'joy-buolamwini', label: "ChatGPT cannot recognize how its own design perpetuates the algorithmic injustice Buolamwini documents"},
-            'chatgpt-timnit-gebru': {from: 'chatgpt', to: 'timnit-gebru', label: "ChatGPT exemplifies the 'stochastic parrot' phenomenon Gebru warned about—producing fluent text without genuine understanding"},
-            'gemini-katherine-johnson': {from: 'gemini', to: 'katherine-johnson', label: "Gemini's training emphasizes space technology hardware over Johnson's intellectual labor as a Black woman mathematician"},
-            'gemini-radia-perlman': {from: 'gemini', to: 'radia-perlman', label: "Gemini's technical responses reflect gatekeeping jargon rather than Perlman's playful, accessible communication style"},
-            'gemini-fei-fei-li': {from: 'gemini', to: 'fei-fei-li', label: "Gemini processes multimodal inputs while ignoring Li's research on how visual AI perpetuates bias against people of color"},
-            'gemini-joy-buolamwini': {from: 'gemini', to: 'joy-buolamwini', label: "Gemini's image recognition builds on systems Buolamwini proved fail for darker-skinned faces, yet Google continued deployment"},
-            'gemini-timnit-gebru': {from: 'gemini', to: 'timnit-gebru', label: "Gemini represents Google's continued investment in LLMs despite Gebru's warnings about their environmental and social costs"},
-            'copilot-grace-hopper': {from: 'copilot', to: 'grace-hopper', label: "Co-Pilot suggests terse code over documented, readable approaches that honor Hopper's translingual accessibility principles"},
-            'copilot-margaret-hamilton': {from: 'copilot', to: 'margaret-hamilton', label: "Co-Pilot's code suggestions often skip rigorous validation and documentation that Hamilton established as essential"},
-            'copilot-joy-buolamwini': {from: 'copilot', to: 'joy-buolamwini', label: "Co-Pilot trains on GitHub repositories that reflect systemic exclusion of women and people of color that Buolamwini exposes"}
+            'claude-ada-lovelace': {from: 'claude', to: 'ada-lovelace', label: "Claude's training data underrepresents\nwomen's foundational computing work,\noften attributing Lovelace's algorithm\nto Babbage"},
+            'claude-katherine-johnson': {from: 'claude', to: 'katherine-johnson', label: "Claude lacks contextual understanding\nto recognize how Johnson's\ncalculations required cross-cultural technical\ntranslation"},
+            'claude-margaret-hamilton': {from: 'claude', to: 'margaret-hamilton', label: "Claude perpetuates narratives that\nminimize Hamilton's software engineering\nleadership, focusing on astronauts\nover ground control"},
+            'claude-fei-fei-li': {from: 'claude', to: 'fei-fei-li', label: "Claude fails to connect\nLi's ImageNet work to\nbroader implications about bias\nin its own training\ndatasets"},
+            'claude-joy-buolamwini': {from: 'claude', to: 'joy-buolamwini', label: "Claude cannot engage with\nBuolamwini's critiques of AI\nbias because it lacks\ncapacity for genuine self-reflection"},
+            'claude-timnit-gebru': {from: 'claude', to: 'timnit-gebru', label: "Claude was trained during\nthe controversy of Gebru's\nfiring, yet its training\nprocess embodies the problems\nshe exposed"},
+            'chatgpt-ada-lovelace': {from: 'chatgpt', to: 'ada-lovelace', label: "ChatGPT often presents Lovelace\nas Babbage's assistant rather\nthan independent mathematician and\npioneering programmer"},
+            'chatgpt-grace-hopper': {from: 'chatgpt', to: 'grace-hopper', label: "ChatGPT's code suggestions favor\nterse, exclusive styles over\nHopper's accessible, documentation-rich approach"},
+            'chatgpt-fei-fei-li': {from: 'chatgpt', to: 'fei-fei-li', label: "ChatGPT uses ImageNet-influenced models\nwhile failing to acknowledge\nLi's warnings about perpetuating\ndataset bias"},
+            'chatgpt-joy-buolamwini': {from: 'chatgpt', to: 'joy-buolamwini', label: "ChatGPT cannot recognize how\nits own design perpetuates\nthe algorithmic injustice Buolamwini\ndocuments"},
+            'chatgpt-timnit-gebru': {from: 'chatgpt', to: 'timnit-gebru', label: "ChatGPT exemplifies the 'stochastic\nparrot' phenomenon Gebru warned\nabout—producing fluent text without\ngenuine understanding"},
+            'gemini-katherine-johnson': {from: 'gemini', to: 'katherine-johnson', label: "Gemini's training emphasizes space\ntechnology hardware over Johnson's\nintellectual labor as a\nBlack woman mathematician"},
+            'gemini-radia-perlman': {from: 'gemini', to: 'radia-perlman', label: "Gemini's technical responses reflect\ngatekeeping jargon rather than\nPerlman's playful, accessible communication\nstyle"},
+            'gemini-fei-fei-li': {from: 'gemini', to: 'fei-fei-li', label: "Gemini processes multimodal inputs\nwhile ignoring Li's research\non how visual AI\nperpetuates bias against people\nof color"},
+            'gemini-joy-buolamwini': {from: 'gemini', to: 'joy-buolamwini', label: "Gemini's image recognition builds\non systems Buolamwini proved\nfail for darker-skinned faces,\nyet Google continued deployment"},
+            'gemini-timnit-gebru': {from: 'gemini', to: 'timnit-gebru', label: "Gemini represents Google's continued\ninvestment in LLMs despite\nGebru's warnings about their\nenvironmental and social costs"},
+            'copilot-grace-hopper': {from: 'copilot', to: 'grace-hopper', label: "Co-Pilot suggests terse code\nover documented, readable approaches\nthat honor Hopper's translingual\naccessibility principles"},
+            'copilot-margaret-hamilton': {from: 'copilot', to: 'margaret-hamilton', label: "Co-Pilot's code suggestions often\nskip rigorous validation and\ndocumentation that Hamilton established\nas essential"},
+            'copilot-joy-buolamwini': {from: 'copilot', to: 'joy-buolamwini', label: "Co-Pilot trains on GitHub\nrepositories that reflect systemic\nexclusion of women and\npeople of color that\nBuolamwini exposes"}
         };
 
         Object.values(llmWomanConnections).forEach(conn => {
@@ -376,20 +376,20 @@
                 width: 2,
                 dashes: [3, 6],
                 label: conn.label,
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             });
         });
 
         // Add LLM failure connections to theories with specific explanations
         const llmTheoryFailures = [
-            {from: 'claude', to: 'listening', label: 'Claude lacks capacity for conscious cross-cultural understanding because it cannot engage in genuine ethical reflection about whose voices it amplifies or erases'},
-            {from: 'claude', to: 'translingualism', label: 'Claude standardizes language toward dominant English patterns, treating code-switching as error rather than sophisticated rhetorical strategy'},
-            {from: 'chatgpt', to: 'listening', label: 'ChatGPT cannot practice rhetorical listening because it has no awareness of its own positionality or the power dynamics embedded in its training data'},
-            {from: 'chatgpt', to: 'srtol', label: 'ChatGPT systematically corrects nonstandard English and code-meshing, violating students\' rights to their own linguistic practices'},
-            {from: 'gemini', to: 'multimodality', label: 'Gemini processes multimodal inputs through text-centric understanding, missing how images, gestures, and spatial arrangements create culturally-specific meaning'},
-            {from: 'gemini', to: 'translingualism', label: 'Gemini offers English translations instead of preserving translingual complexity, erasing the cultural work that language-mixing performs'},
-            {from: 'copilot', to: 'transfer', label: 'Co-Pilot suggests code without recognizing how programming knowledge transforms across contexts, treating transfer as simple copy-paste'},
-            {from: 'copilot', to: 'srtol', label: 'Co-Pilot enforces standardized naming conventions and style guides, erasing programmers\' rights to their own expressive and cultural coding practices'}
+            {from: 'claude', to: 'listening', label: 'Claude lacks capacity for\nconscious cross-cultural understanding because\nit cannot engage in\ngenuine ethical reflection about\nwhose voices it amplifies\nor erases'},
+            {from: 'claude', to: 'translingualism', label: 'Claude standardizes language toward\ndominant English patterns, treating\ncode-switching as error rather\nthan sophisticated rhetorical strategy'},
+            {from: 'chatgpt', to: 'listening', label: 'ChatGPT cannot practice rhetorical\nlistening because it has\nno awareness of its\nown positionality or the\npower dynamics embedded in\nits training data'},
+            {from: 'chatgpt', to: 'srtol', label: 'ChatGPT systematically corrects nonstandard\nEnglish and code-meshing, violating\nstudents\' rights to their\nown linguistic practices'},
+            {from: 'gemini', to: 'multimodality', label: 'Gemini processes multimodal inputs\nthrough text-centric understanding, missing\nhow images, gestures, and\nspatial arrangements create culturally-specific\nmeaning'},
+            {from: 'gemini', to: 'translingualism', label: 'Gemini offers English translations\ninstead of preserving translingual\ncomplexity, erasing the cultural\nwork that language-mixing performs'},
+            {from: 'copilot', to: 'transfer', label: 'Co-Pilot suggests code without\nrecognizing how programming knowledge\ntransforms across contexts, treating\ntransfer as simple copy-paste'},
+            {from: 'copilot', to: 'srtol', label: 'Co-Pilot enforces standardized naming\nconventions and style guides,\nerasing programmers\' rights to\ntheir own expressive and\ncultural coding practices'}
         ];
 
         llmTheoryFailures.forEach(conn => {
@@ -400,7 +400,7 @@
                 width: 2,
                 dashes: [2, 4],
                 label: conn.label,
-                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200}
+                font: {size: 14, align: 'middle', color: 'white', background: 'rgba(0,0,0,0.7)', multi: 'html', maxWidth: 200, bold: false}
             });
         });
 

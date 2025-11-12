@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -254,70 +254,215 @@
                     </div>
                 </section>
 
-                <!-- Interactive Theory-LLM Connection Map -->
+                <!-- Interactive Theory-LLM-Women Network -->
                 <section aria-labelledby="theory-llm-map">
-                    <h3 id="theory-llm-map">Interactive Theory-LLM Connection Map</h3>
-                    <p class="section-intro">
-                        Explore how these 6 theories relate to each other, where they create tensions, and how
-                        LLMs (Claude, ChatGPT, Gemini, Co-Pilot) fail to uphold them. Click on any node to see
-                        detailed explanations. Hover over connections to understand relationships and implications
-                        for women contributors in the timeline.
-                    </p>
+                    <h3 id="theory-llm-map">Interactive Theory-LLM-Women Network</h3>
 
-                    <div id="theory-llm-canvas" class="visualization-container" role="img"
-                         aria-label="Interactive map showing relationships between rhetoric theories and LLMs">
-                        <!-- P5.js canvas will be inserted here -->
-                    </div>
-
-                    <div class="map-legend">
-                        <div class="legend-item">
-                            <svg width="40" height="2">
-                                <line x1="0" y1="1" x2="40" y2="1" stroke="rgb(76, 175, 80)" stroke-width="2"/>
-                            </svg>
-                            <span>Complementary</span>
-                        </div>
-                        <div class="legend-item">
-                            <svg width="40" height="2">
-                                <line x1="0" y1="1" x2="40" y2="1" stroke="rgb(244, 67, 54)" stroke-width="2" stroke-dasharray="10,5"/>
-                            </svg>
-                            <span>Tension</span>
-                        </div>
-                        <div class="legend-item">
-                            <svg width="40" height="2">
-                                <line x1="0" y1="1" x2="40" y2="1" stroke="rgb(255, 152, 0)" stroke-width="2" stroke-dasharray="2,4"/>
-                            </svg>
-                            <span>LLM Limitation</span>
-                        </div>
-                        <div class="legend-item">
-                            <svg width="40" height="2">
-                                <line x1="0" y1="1" x2="40" y2="1" stroke="rgb(0, 188, 212)" stroke-width="2" stroke-dasharray="5,3"/>
-                            </svg>
-                            <span>Woman → Theory</span>
-                        </div>
-                    </div>
-
-                    <div class="callout callout-info" style="margin-top: var(--spacing-2xl);">
-                        <h4>How to Explore</h4>
+                    <div class="callout callout-info">
+                        <h4>How to Use This Interactive Map</h4>
                         <ul>
-                            <li><strong>Purple circles</strong> = Rhetoric & Composition Theories</li>
-                            <li><strong>Orange rectangles</strong> = LLM Technologies</li>
-                            <li><strong>Teal diamonds</strong> = Women Contributors to Computing & AI (from Timeline)</li>
-                            <li><strong>Hover over women nodes</strong> for quick info (name, year, contribution)</li>
-                            <li><strong>Click theory nodes</strong> to see full explanations, LLM impacts, and connections to women contributors</li>
-                            <li><strong>Click LLM nodes</strong> to understand how they function and their rhetorical implications</li>
-                            <li><strong>Click women nodes</strong> to see full biography, rhetorical significance, and which LLMs erase their contributions</li>
-                            <li><strong>Click or hover connections</strong> to see relationship details and implications for women in computing</li>
+                            <li><strong>Click and drag</strong> to move around the network</li>
+                            <li><strong>Scroll</strong> to zoom in and out</li>
+                            <li><strong>Click on any colored circle</strong> (theory, LLM, or woman) to see detailed information</li>
+                            <li><strong>Gray boxes</strong> show key theoretical concepts for each rhetoric theory</li>
+                            <li><strong>Connection lines</strong> show relationships, tensions, and implications between nodes</li>
                         </ul>
+                    </div>
+
+                    <div id="mynetwork" class="vis-network-container" role="img"
+                         aria-label="Interactive network visualization showing relationships between rhetoric theories, LLMs, and women contributors">
+                    </div>
+
+                    <div class="map-legend" style="margin-top: var(--spacing-lg);">
+                        <h4>Node Types</h4>
+                        <div class="legend-grid">
+                            <div class="legend-item">
+                                <span class="legend-circle" style="background: #FF6B6B;"></span>
+                                <span>Grammar Theory</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-circle" style="background: #4ECDC4;"></span>
+                                <span>Rhetorical Listening</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-circle" style="background: #45B7D1;"></span>
+                                <span>Students' Rights / Translingualism</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-circle" style="background: #96CEB4;"></span>
+                                <span>Transfer Theory</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-circle" style="background: #FECA57;"></span>
+                                <span>Multimodality</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-circle" style="background: #FF8C42;"></span>
+                                <span>LLM Technologies</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-circle" style="background: #00968A;"></span>
+                                <span>Women Contributors</span>
+                            </div>
+                        </div>
+
+                        <h4 style="margin-top: var(--spacing-lg);">Connection Types</h4>
+                        <div class="connection-types">
+                            <div class="connection-item">
+                                <svg width="60" height="2">
+                                    <line x1="0" y1="1" x2="60" y2="1" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,3"/>
+                                </svg>
+                                <span><strong>Challenges (red dashed):</strong> Theories that question or oppose fundamental assumptions</span>
+                            </div>
+                            <div class="connection-item">
+                                <svg width="60" height="2">
+                                    <line x1="0" y1="1" x2="60" y2="1" stroke="#27ae60" stroke-width="3"/>
+                                </svg>
+                                <span><strong>Supports/Aligns (green solid):</strong> Theories that reinforce and build upon shared principles</span>
+                            </div>
+                            <div class="connection-item">
+                                <svg width="60" height="2">
+                                    <line x1="0" y1="1" x2="60" y2="1" stroke="#9b59b6" stroke-width="4"/>
+                                </svg>
+                                <span><strong>Evolves Into (purple thick):</strong> Historical/theoretical progression from one framework to another</span>
+                            </div>
+                            <div class="connection-item">
+                                <svg width="60" height="2">
+                                    <line x1="0" y1="1" x2="60" y2="1" stroke="#3498db" stroke-width="2"/>
+                                </svg>
+                                <span><strong>Enables/Facilitates (blue):</strong> One theory provides tools or concepts for another</span>
+                            </div>
+                            <div class="connection-item">
+                                <svg width="60" height="2">
+                                    <line x1="0" y1="1" x2="60" y2="1" stroke="#95a5a6" stroke-width="2" stroke-dasharray="5,5"/>
+                                </svg>
+                                <span><strong>Complicates (gray dashed):</strong> Reveals complexity or context-dependency</span>
+                            </div>
+                            <div class="connection-item">
+                                <svg width="60" height="2">
+                                    <line x1="0" y1="1" x2="60" y2="1" stroke="#f39c12" stroke-width="2"/>
+                                </svg>
+                                <span><strong>Extends/Expands (orange):</strong> Broadens scope beyond original boundaries</span>
+                            </div>
+                            <div class="connection-item">
+                                <svg width="60" height="2">
+                                    <line x1="0" y1="1" x2="60" y2="1" stroke="#00BCD4" stroke-width="2" stroke-dasharray="5,3"/>
+                                </svg>
+                                <span><strong>Woman → Theory (cyan dashed):</strong> Women's work that exemplifies the theory</span>
+                            </div>
+                            <div class="connection-item">
+                                <svg width="60" height="2">
+                                    <line x1="0" y1="1" x2="60" y2="1" stroke="#FF8C42" stroke-width="2" stroke-dasharray="3,6"/>
+                                </svg>
+                                <span><strong>LLM Erasure (orange dotted):</strong> LLMs that minimize women's contributions</span>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-                <!-- Modal for detailed info -->
-                <div id="concept-modal" class="modal" style="display:none;" role="dialog" aria-labelledby="modal-title" aria-modal="true">
-                    <div class="modal-content">
-                        <span class="modal-close" aria-label="Close modal">&times;</span>
-                        <div id="modal-body"></div>
+                <!-- Interactive Feedback Tool -->
+                <section aria-labelledby="feedback-tool" class="feedback-section">
+                    <h3 id="feedback-tool">💬 Interactive Feedback Tool</h3>
+
+                    <div class="callout callout-info" style="margin-bottom: var(--spacing-xl);">
+                        <h4>📋 How to Use This Feature</h4>
+                        <ol style="line-height: 1.8;">
+                            <li><strong>Write Your Thoughts:</strong> In the text box below, share your observations, questions, or insights about the relationships between these rhetoric and composition theories.</li>
+                            <li><strong>What to Include:</strong> You can discuss how theories connect, challenge each other, or apply to your teaching practice. Mention specific theory names (like "translingualism," "grammar," "transfer") and relationship terms (like "supports," "challenges," "extends").</li>
+                            <li><strong>Click "Analyze Feedback":</strong> The tool will automatically extract and highlight key concepts, theories, and relationship words from your feedback.</li>
+                            <li><strong>Review Results:</strong> Your extracted keywords appear on the right, color-coded by type:
+                                <ul style="margin-top: 10px;">
+                                    <li><span class="tag-example tag-theory">Red tags</span> = Theory-specific terms</li>
+                                    <li><span class="tag-example tag-pedagogy">Blue tags</span> = Pedagogical concepts</li>
+                                    <li><span class="tag-example tag-relationship">Green tags</span> = Relationship terms</li>
+                                </ul>
+                            </li>
+                            <li><strong>Clear & Start Over:</strong> Click the "Clear" button to reset and try again with new feedback.</li>
+                        </ol>
+                        <div class="example-box">
+                            <strong>💡 Example:</strong> "I think translingualism challenges traditional grammar by viewing language as fluid rather than fixed. This supports the students' rights framework and enables transfer across contexts."
+                        </div>
                     </div>
-                </div>
+
+                    <div class="feedback-container">
+                        <div class="feedback-input-area">
+                            <h4>📝 Provide Feedback on the Network</h4>
+                            <textarea id="feedbackInput" class="feedback-textarea" placeholder="Example: I notice that translingualism and multimodality both challenge traditional grammar by expanding what counts as legitimate communication. In my teaching, I see how transfer theory helps students apply rhetorical listening skills across different writing contexts...
+
+Try mentioning specific theories, their relationships, and how you see them working in practice!"></textarea>
+                            <div class="feedback-instructions">
+                                Write your feedback above and click "Analyze" to extract key concepts and themes from your input.
+                            </div>
+                            <button onclick="analyzeFeedback()" class="btn btn-primary">Analyze Feedback</button>
+                            <button onclick="clearFeedback()" class="btn btn-secondary" style="margin-left: 10px;">Clear</button>
+                        </div>
+
+                        <div class="keywords-area">
+                            <h4>🔍 Key Words & Phrases Extracted</h4>
+                            <div id="keywordsList" class="keywords-list">
+                                <div class="keywords-placeholder">
+                                    Enter feedback and click "Analyze" to extract key terms and concepts
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- APA 7th Edition References -->
+                <section aria-labelledby="references" class="references-section">
+                    <h3 id="references">References</h3>
+                    <div class="reference-entry">
+                        Canagarajah, A. S. (2013). <em>Translingual practice: Global Englishes and cosmopolitan relations</em>. Routledge.
+                    </div>
+                    <div class="reference-entry">
+                        Conference on College Composition and Communication. (1974). Students' right to their own language. <em>College Composition and Communication, 25</em>(3), 1-32. https://doi.org/10.2307/356840
+                    </div>
+                    <div class="reference-entry">
+                        Horner, B., Lu, M.-Z., Royster, J. J., & Trimbur, J. (2011). Language difference in writing: Toward a translingual approach. <em>College English, 73</em>(3), 303-321.
+                    </div>
+                    <div class="reference-entry">
+                        Kress, G. (2010). <em>Multimodality: A social semiotic approach to contemporary communication</em>. Routledge.
+                    </div>
+                    <div class="reference-entry">
+                        Kress, G., & Van Leeuwen, T. (2001). <em>Multimodal discourse: The modes and media of contemporary communication</em>. Oxford University Press.
+                    </div>
+                    <div class="reference-entry">
+                        Lunsford, A. A. (2006). <em>The St. Martin's handbook</em> (6th ed.). Bedford/St. Martin's.
+                    </div>
+                    <div class="reference-entry">
+                        National Council of Teachers of English. (2005). <em>Multimodal literacies</em> [Position statement]. https://ncte.org/statement/multimodalliteracies/
+                    </div>
+                    <div class="reference-entry">
+                        Nowacek, R. S. (2011). <em>Agents of integration: Understanding transfer as a rhetorical act</em>. Southern Illinois University Press.
+                    </div>
+                    <div class="reference-entry">
+                        Perelman, L. C., Paradis, J., & Barrett, E. (1998). <em>The Mayfield handbook of technical and scientific writing</em>. Mayfield Publishing Company.
+                    </div>
+                    <div class="reference-entry">
+                        Ratcliffe, K. (2005). <em>Rhetorical listening: Identification, gender, whiteness</em>. Southern Illinois University Press.
+                    </div>
+                    <div class="reference-entry">
+                        Reiff, M. J., & Bawarshi, A. (2011). Tracing discursive resources: How students use prior genre knowledge to negotiate new writing contexts in first-year composition. <em>Written Communication, 28</em>(3), 312-337. https://doi.org/10.1177/0741088311410183
+                    </div>
+                    <div class="reference-entry">
+                        Roozen, K. (2010). Tracing trajectories of practice: Repurposing in one student's developing disciplinary writing processes. <em>Written Communication, 27</em>(3), 318-354. https://doi.org/10.1177/0741088310373529
+                    </div>
+                    <div class="reference-entry">
+                        Selber, S. A. (2004). <em>Multiliteracies for a digital age</em>. Southern Illinois University Press.
+                    </div>
+                    <div class="reference-entry">
+                        Shipka, J. (2011). <em>Toward a composition made whole</em>. University of Pittsburgh Press.
+                    </div>
+                    <div class="reference-entry">
+                        Wardle, E., & Downs, D. (2017). <em>Writing about writing: A college reader</em> (3rd ed.). Bedford/St. Martin's.
+                    </div>
+                    <div class="reference-entry">
+                        Yancey, K. B., Robertson, L., & Taczak, K. (2014). <em>Writing across contexts: Transfer, composition, and sites of writing</em>. Utah State University Press.
+                    </div>
+                    <div class="reference-entry">
+                        Young, V. A., & Martinez, A. Y. (Eds.). (2011). <em>Code-meshing as world English: Pedagogy, policy, performance</em>. National Council of Teachers of English.
+                    </div>
+                </section>
 
                 <!-- Why This Matters -->
                 <section aria-labelledby="why-matters">
@@ -388,6 +533,6 @@
     <script src="../js/main.js"></script>
     <script src="../js/navigation.js"></script>
     <script src="../js/visualizations/rhetoric-network.js"></script>
-    <script src="../js/visualizations/theory-llm-map.js"></script>
+    <script src="../js/visualizations/rhetoric-vis-network.js"></script>
 </body>
 </html>

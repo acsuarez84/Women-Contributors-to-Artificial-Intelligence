@@ -942,3 +942,242 @@ textarea {
     --border-color: #fff;
   }
 }
+
+/* ============================================
+   VIS.JS NETWORK VISUALIZATION
+   ============================================ */
+
+.vis-network-container {
+    width: 100%;
+    height: 900px;
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    background: var(--bg-primary);
+    margin: var(--spacing-xl) 0;
+}
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.legend-circle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: var(--spacing-sm);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.connection-types {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+.connection-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.connection-item svg {
+    flex-shrink: 0;
+}
+
+.connection-item span {
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+/* ============================================
+   FEEDBACK ANALYSIS TOOL
+   ============================================ */
+
+.feedback-section {
+    background: var(--bg-secondary);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-lg);
+    margin: var(--spacing-3xl) 0;
+    border: 2px solid var(--border-color);
+}
+
+.feedback-section h3 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.feedback-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    margin-top: var(--spacing-xl);
+}
+
+@media (max-width: 900px) {
+    .feedback-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.feedback-input-area,
+.keywords-area {
+    background: var(--bg-primary);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.feedback-input-area h4,
+.keywords-area h4 {
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
+    font-size: 1.3em;
+}
+
+.feedback-textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: var(--spacing-md);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-family: var(--font-body);
+    font-size: 14px;
+    resize: vertical;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.feedback-textarea:focus {
+    outline: none;
+    border-color: var(--accent-purple);
+}
+
+.feedback-instructions {
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-top: var(--spacing-md);
+    line-height: 1.5;
+}
+
+.keywords-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    min-height: 100px;
+    padding: var(--spacing-md);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border: 2px dashed var(--border-color);
+}
+
+.keywords-placeholder {
+    color: var(--text-muted);
+    width: 100%;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.keyword-tag {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    animation: fadeIn 0.5s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.tag-theory {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+}
+
+.tag-pedagogy {
+    background: linear-gradient(135deg, #4ECDC4 0%, #45B7D1 100%);
+}
+
+.tag-relationship {
+    background: linear-gradient(135deg, #96CEB4 0%, #88D8B0 100%);
+}
+
+.tag-example {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 13px;
+    color: white;
+    font-weight: 500;
+}
+
+.example-box {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    background: rgba(102, 126, 234, 0.1);
+    border-left: 4px solid var(--accent-purple);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   REFERENCES SECTION
+   ============================================ */
+
+.references-section {
+    background: var(--bg-primary);
+    padding: var(--spacing-3xl);
+    border-top: 3px solid var(--accent-purple);
+    margin-top: var(--spacing-3xl);
+}
+
+.references-section h3 {
+    color: var(--text-primary);
+    font-size: 2em;
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.reference-entry {
+    margin-bottom: var(--spacing-md);
+    padding-left: 35px;
+    text-indent: -35px;
+    line-height: 1.8;
+    color: var(--text-primary);
+    font-size: 15px;
+}
+
+.reference-entry em {
+    font-style: italic;
+}
+
+/* Dark mode adjustments for vis.js */
+[data-theme="dark"] .vis-network-container {
+    background: var(--bg-primary);
+}
+
+[data-theme="dark"] .legend-circle {
+    border-color: rgba(255, 255, 255, 0.3);
+}

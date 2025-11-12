@@ -180,9 +180,9 @@ li {
    ============================================ */
 
 .container {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  max-width: calc(100vw - 192px);  /* Full width minus 1" (96px) on each side */
+  margin: 0 96px;
+  padding: 0;
 }
 
 .sr-only {

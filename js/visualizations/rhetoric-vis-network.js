@@ -54,7 +54,7 @@
                 id: 'grammar',
                 label: 'GRAMMAR',
                 color: '#FF6B6B',
-                font: {size: 27, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: false},
                 title: 'Click for full description',
                 size: 90,
                 shape: 'circle',
@@ -64,7 +64,7 @@
                 id: 'listening',
                 label: 'RHETORICAL\nLISTENING',
                 color: '#4ECDC4',
-                font: {size: 27, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: false},
                 title: 'Click for full description',
                 size: 90,
                 shape: 'circle',
@@ -74,7 +74,7 @@
                 id: 'srtol',
                 label: "STUDENTS' RIGHTS\nTO THEIR\nOWN LANGUAGE",
                 color: '#45B7D1',
-                font: {size: 27, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: false},
                 title: 'Click for full description',
                 size: 100,
                 shape: 'circle',
@@ -84,7 +84,7 @@
                 id: 'transfer',
                 label: 'TRANSFER',
                 color: '#96CEB4',
-                font: {size: 27, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: false},
                 title: 'Click for full description',
                 size: 90,
                 shape: 'circle',
@@ -94,7 +94,7 @@
                 id: 'translingualism',
                 label: 'TRANSLINGUALISM',
                 color: '#45B7D1',
-                font: {size: 27, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: false},
                 title: 'Click for full description',
                 size: 100,
                 shape: 'circle',
@@ -104,7 +104,7 @@
                 id: 'multimodality',
                 label: 'MULTIMODALITY',
                 color: '#FECA57',
-                font: {size: 27, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: false},
                 title: 'Click for full description',
                 size: 90,
                 shape: 'circle',
@@ -116,7 +116,7 @@
                 id: 'claude',
                 label: 'Claude',
                 color: '#FF8C42',
-                font: {size: 27, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: false},
                 title: 'Click to see how Claude functions',
                 size: 70,
                 shape: 'box',
@@ -126,7 +126,7 @@
                 id: 'chatgpt',
                 label: 'ChatGPT',
                 color: '#FF8C42',
-                font: {size: 27, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: false},
                 title: 'Click to see how ChatGPT functions',
                 size: 70,
                 shape: 'box',
@@ -136,7 +136,7 @@
                 id: 'gemini',
                 label: 'Gemini',
                 color: '#FF8C42',
-                font: {size: 27, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: false},
                 title: 'Click to see how Gemini functions',
                 size: 70,
                 shape: 'box',
@@ -146,7 +146,7 @@
                 id: 'copilot',
                 label: 'Co-Pilot',
                 color: '#FF8C42',
-                font: {size: 27, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: false},
                 title: 'Click to see how Co-Pilot functions',
                 size: 70,
                 shape: 'box',
@@ -161,11 +161,17 @@
             const llmNames = woman.llmFailures ? woman.llmFailures.map(l => l.charAt(0).toUpperCase() + l.slice(1)).join(', ') : 'None';
             const tooltip = `${woman.name} (${woman.year}): ${woman.contribution}. Exemplifies: ${theoryNames}. Erased by: ${llmNames}`;
 
+            // Split name into first and last name for two-line display
+            const nameParts = woman.name.split(' ');
+            const firstName = nameParts.slice(0, -1).join(' '); // Everything except last word
+            const lastName = nameParts[nameParts.length - 1]; // Last word
+            const multiLineName = `${firstName}\n${lastName}`;
+
             nodes.add({
                 id: woman.id,
-                label: woman.name, // Full name
+                label: multiLineName, // Multi-line name: first on top, last on bottom
                 color: '#00968A',
-                font: {size: 27, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: false},
                 title: tooltip,
                 size: 60,
                 shape: 'diamond',

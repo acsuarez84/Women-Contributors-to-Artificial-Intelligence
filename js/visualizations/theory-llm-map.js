@@ -5,6 +5,7 @@
 
 let theoryLLMSketch = function(p) {
   let data = null;
+  let womenData = null;
   let nodes = [];
   let edges = [];
   let hoveredNode = null;
@@ -16,14 +17,17 @@ let theoryLLMSketch = function(p) {
     theoryNodeRadius: 40,
     llmNodeWidth: 120,
     llmNodeHeight: 60,
+    womanNodeSize: 35,
     fontSize: 11,
     labelFontSize: 10,
     colors: {
       theory: [156, 39, 176],         // Purple
       llm: [255, 152, 0],              // Orange
+      woman: [0, 150, 136],            // Teal
       complementary: [76, 175, 80],    // Green
       tension: [244, 67, 54],          // Red
       llmFailure: [255, 152, 0],       // Orange
+      womanConnection: [0, 188, 212],  // Cyan
       hover: [255, 193, 7],            // Yellow
       background: {
         light: 248,
@@ -52,22 +56,80 @@ let theoryLLMSketch = function(p) {
 
   async function loadMapData() {
     try {
-      const response = await fetch('../data/theory-llm-network.json');
-      data = await response.json();
+      console.log('Loading theory-LLM network data...');
 
-      if (data && data.nodes && data.edges) {
-        layoutNodes(data.nodes);
-        edges = data.edges;
+      // Load main theory-LLM data
+      const response1 = await fetch('../data/theory-llm-network.json');
+      if (!response1.ok) {
+        throw new Error(`HTTP error loading theories/LLMs! status: ${response1.status}`);
+      }
+      data = await response1.json();
+      console.log('Theory-LLM data loaded:', data);
+
+      // Load women contributors data
+      const response2 = await fetch('../data/women-tech-contributors.json');
+      if (!response2.ok) {
+        throw new Error(`HTTP error loading women! status: ${response2.status}`);
+      }
+      womenData = await response2.json();
+      console.log('Women contributors data loaded:', womenData);
+
+      if (data && data.nodes && data.edges && womenData) {
+        // Combine all nodes
+        const allNodes = [...data.nodes, ...womenData];
+        layoutNodes(allNodes);
+
+        // Add edges from women to theories/LLMs
+        edges = [...data.edges, ...createWomenConnections(womenData)];
+        console.log(`Loaded ${nodes.length} nodes and ${edges.length} edges`);
+      } else {
+        console.error('Invalid data structure');
       }
     } catch (error) {
-      console.error('Error loading theory-LLM network data:', error);
+      console.error('Error loading data:', error);
+      console.error('Error details:', error.message, error.stack);
     }
   }
 
+  function createWomenConnections(women) {
+    const connections = [];
+
+    women.forEach(woman => {
+      // Connect to theories
+      if (woman.theoryConnections) {
+        woman.theoryConnections.forEach(theoryId => {
+          connections.push({
+            source: woman.id,
+            target: theoryId,
+            type: 'woman-theory',
+            relationship: `${woman.name}'s work exemplifies this theory`,
+            womenImplication: woman.rhetoricalSignificance
+          });
+        });
+      }
+
+      // Connect to LLMs that fail to recognize their work
+      if (woman.llmFailures) {
+        woman.llmFailures.forEach(llmId => {
+          connections.push({
+            source: llmId,
+            target: woman.id,
+            type: 'llm-erases-woman',
+            failure: `${llmId} perpetuates erasure of ${woman.name}'s contributions`,
+            womenImpact: woman.rhetoricalSignificance
+          });
+        });
+      }
+    });
+
+    return connections;
+  }
+
   function layoutNodes(nodeData) {
-    // Separate theories and LLMs
+    // Separate node types
     const theories = nodeData.filter(n => n.type === 'theory');
     const llms = nodeData.filter(n => n.type === 'llm');
+    const women = nodeData.filter(n => n.type === 'woman');
 
     // Theories on left side (arranged in 2 columns of 3)
     const theoryYStart = 150;
@@ -82,6 +144,20 @@ let theoryLLMSketch = function(p) {
         ...theory,
         x: col === 0 ? theoryXLeft : theoryXRight,
         y: theoryYStart + (row * theoryYSpacing)
+      });
+    });
+
+    // Women in middle (arranged in circular pattern)
+    const centerX = p.width / 2;
+    const centerY = p.height / 2;
+    const radius = 180;
+
+    women.forEach((woman, index) => {
+      const angle = (index / women.length) * Math.PI * 2 - Math.PI / 2;
+      nodes.push({
+        ...woman,
+        x: centerX + Math.cos(angle) * radius,
+        y: centerY + Math.sin(angle) * radius
       });
     });
 
@@ -156,13 +232,20 @@ let theoryLLMSketch = function(p) {
   function isPointInNode(px, py, node) {
     if (node.type === 'theory') {
       return p.dist(px, py, node.x, node.y) < config.theoryNodeRadius;
-    } else {
+    } else if (node.type === 'llm') {
       // Rectangle for LLM nodes
       return px > node.x - config.llmNodeWidth / 2 &&
              px < node.x + config.llmNodeWidth / 2 &&
              py > node.y - config.llmNodeHeight / 2 &&
              py < node.y + config.llmNodeHeight / 2;
+    } else if (node.type === 'woman') {
+      // Diamond (rotated square) for women nodes
+      const size = config.womanNodeSize;
+      const dx = Math.abs(px - node.x);
+      const dy = Math.abs(py - node.y);
+      return (dx + dy) < size;
     }
+    return false;
   }
 
   function isPointNearEdge(px, py, edge) {
@@ -214,10 +297,10 @@ let theoryLLMSketch = function(p) {
       if (!source || !target) return;
 
       const isHovered = hoveredEdge === edge;
-      const alpha = isHovered ? 255 : 120;
+      const alpha = isHovered ? 255 : 80;
 
       // Set edge style based on type
-      p.strokeWeight(isHovered ? 3 : 2);
+      p.strokeWeight(isHovered ? 3 : 1.5);
 
       if (edge.type === 'complementary') {
         p.stroke(...config.colors.complementary, alpha);
@@ -228,6 +311,12 @@ let theoryLLMSketch = function(p) {
       } else if (edge.type === 'llm-failure') {
         p.stroke(...config.colors.llmFailure, alpha);
         p.drawingContext.setLineDash([2, 4]);
+      } else if (edge.type === 'woman-theory') {
+        p.stroke(...config.colors.womanConnection, alpha);
+        p.drawingContext.setLineDash([5, 3]);
+      } else if (edge.type === 'llm-erases-woman') {
+        p.stroke(...config.colors.llmFailure, alpha * 0.8);
+        p.drawingContext.setLineDash([3, 6]);
       }
 
       p.line(source.x, source.y, target.x, target.y);
@@ -278,6 +367,28 @@ let theoryLLMSketch = function(p) {
         p.textAlign(p.CENTER, p.CENTER);
         p.textSize(config.fontSize);
         p.text(node.label, node.x, node.y);
+
+      } else if (node.type === 'woman') {
+        // Draw woman node (diamond/rhombus)
+        p.strokeWeight(isHovered || isSelected ? 3 : 2);
+        p.stroke(isHovered ? ...config.colors.hover : 255);
+        p.fill(...config.colors.woman, isHovered ? 255 : 200);
+
+        // Draw diamond
+        const size = config.womanNodeSize;
+        p.push();
+        p.translate(node.x, node.y);
+        p.rotate(p.PI / 4);
+        p.rect(-size/2, -size/2, size, size);
+        p.pop();
+
+        // Label below (first name only for space)
+        p.noStroke();
+        p.fill(...textColor);
+        p.textAlign(p.CENTER, p.TOP);
+        p.textSize(9);
+        const firstName = node.name.split(' ')[0];
+        p.text(firstName, node.x, node.y + size + 2);
       }
     });
   }
@@ -323,7 +434,11 @@ let theoryLLMSketch = function(p) {
     let tooltipText = '';
 
     if (hoveredNode) {
-      tooltipText = hoveredNode.shortDescription || hoveredNode.label;
+      if (hoveredNode.type === 'woman') {
+        tooltipText = `${hoveredNode.name} (${hoveredNode.year}): ${hoveredNode.contribution}`;
+      } else {
+        tooltipText = hoveredNode.shortDescription || hoveredNode.label;
+      }
     } else if (hoveredEdge) {
       tooltipText = hoveredEdge.relationship ||
                     hoveredEdge.failure ||
@@ -447,6 +562,20 @@ let theoryLLMSketch = function(p) {
         <div class="modal-section">
           <h4>Impact on Timeline Women Contributors</h4>
           <p>${node.timelineWomen}</p>
+        </div>
+      `;
+    } else if (node.type === 'woman') {
+      content = `
+        <h3>${node.name}</h3>
+        <p style="color: #00968A; font-weight: 600;">${node.year} | ${node.field}</p>
+        <p><strong>Key Contribution:</strong> ${node.contribution}</p>
+        <div class="modal-section">
+          <h4>Biography</h4>
+          <p>${node.fullBio}</p>
+        </div>
+        <div class="modal-section">
+          <h4>Rhetorical Significance & LLM Implications</h4>
+          <p>${node.rhetoricalSignificance}</p>
         </div>
       `;
     }

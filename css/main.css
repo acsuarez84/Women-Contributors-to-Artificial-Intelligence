@@ -948,13 +948,16 @@ textarea {
    ============================================ */
 
 .vis-network-container {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     min-height: 800px;
-    border: 2px solid var(--border-color);
-    border-radius: var(--radius-lg);
+    border: none;
+    border-radius: 0;
     background: var(--bg-primary);
     margin: var(--spacing-xl) 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    position: relative;
 }
 
 /* Responsive: smaller height on mobile */

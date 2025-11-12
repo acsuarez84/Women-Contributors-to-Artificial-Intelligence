@@ -61,17 +61,6 @@
                 type: 'theory'
             },
             {
-                id: 'desc-grammar',
-                label: 'Traditional prescriptive rules\n• Standardized forms\n• Correctness emphasis\n• Fixed structures\n• Privileged varieties',
-                color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 27, color: '#333', multi: true},
-                shape: 'box',
-                shapeProperties: {borderRadius: 8},
-                size: 50,
-                type: 'description'
-            },
-
-            {
                 id: 'listening',
                 label: 'RHETORICAL\nLISTENING',
                 color: '#4ECDC4',
@@ -81,17 +70,6 @@
                 shape: 'circle',
                 type: 'theory'
             },
-            {
-                id: 'desc-listening',
-                label: 'Krista Ratcliffe framework\n• Conscious identification\n• Cross-cultural understanding\n• Acknowledging differences\n• Ethical engagement',
-                color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 27, color: '#333', multi: true},
-                shape: 'box',
-                shapeProperties: {borderRadius: 8},
-                size: 50,
-                type: 'description'
-            },
-
             {
                 id: 'srtol',
                 label: "STUDENTS' RIGHTS\nTO THEIR\nOWN LANGUAGE",
@@ -103,17 +81,6 @@
                 type: 'theory'
             },
             {
-                id: 'desc-srtol',
-                label: '1974 CCCC Statement\n• Linguistic diversity valued\n• Home languages affirmed\n• Code-meshing supported\n• Dialect rights recognized',
-                color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 27, color: '#333', multi: true},
-                shape: 'box',
-                shapeProperties: {borderRadius: 8},
-                size: 50,
-                type: 'description'
-            },
-
-            {
                 id: 'transfer',
                 label: 'TRANSFER',
                 color: '#96CEB4',
@@ -123,17 +90,6 @@
                 shape: 'circle',
                 type: 'theory'
             },
-            {
-                id: 'desc-transfer',
-                label: 'Knowledge application\n• Context adaptation\n• Writing development\n• Prior knowledge use\n• Boundary crossing',
-                color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 27, color: '#333', multi: true},
-                shape: 'box',
-                shapeProperties: {borderRadius: 8},
-                size: 50,
-                type: 'description'
-            },
-
             {
                 id: 'translingualism',
                 label: 'TRANSLINGUALISM',
@@ -145,17 +101,6 @@
                 type: 'theory'
             },
             {
-                id: 'desc-translingualism',
-                label: 'Language as resource\n• Fluid practices\n• Dynamic negotiation\n• Difference as norm\n• Meaning negotiation',
-                color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 27, color: '#333', multi: true},
-                shape: 'box',
-                shapeProperties: {borderRadius: 8},
-                size: 50,
-                type: 'description'
-            },
-
-            {
                 id: 'multimodality',
                 label: 'MULTIMODALITY',
                 color: '#FECA57',
@@ -164,16 +109,6 @@
                 size: 90,
                 shape: 'circle',
                 type: 'theory'
-            },
-            {
-                id: 'desc-multimodality',
-                label: 'Multiple modes\n• Visual/Spatial/Aural\n• Digital composing\n• Design thinking\n• Semiotic resources',
-                color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 27, color: '#333', multi: true},
-                shape: 'box',
-                shapeProperties: {borderRadius: 8},
-                size: 50,
-                type: 'description'
             },
 
             // LLM nodes
@@ -221,12 +156,17 @@
 
         // Add women nodes
         womenData.forEach(woman => {
+            // Create comprehensive tooltip
+            const theoryNames = woman.theoryConnections ? woman.theoryConnections.map(t => t.charAt(0).toUpperCase() + t.slice(1)).join(', ') : 'None';
+            const llmNames = woman.llmFailures ? woman.llmFailures.map(l => l.charAt(0).toUpperCase() + l.slice(1)).join(', ') : 'None';
+            const tooltip = `${woman.name} (${woman.year}): ${woman.contribution}. Exemplifies: ${theoryNames}. Erased by: ${llmNames}`;
+
             nodes.add({
                 id: woman.id,
-                label: woman.name.split(' ')[0], // First name only for label
+                label: woman.name, // Full name
                 color: '#00968A',
                 font: {size: 27, color: 'white', bold: true},
-                title: `${woman.name}: ${woman.contribution}`,
+                title: tooltip,
                 size: 60,
                 shape: 'diamond',
                 type: 'woman',
@@ -236,14 +176,6 @@
 
         // Create edges array
         const edges = new vis.DataSet([
-            // Connections from main nodes to their description boxes
-            {from: 'grammar', to: 'desc-grammar', color: {color: '#cccccc'}, width: 2, dashes: false, smooth: {type: 'discrete'}, physics: false},
-            {from: 'listening', to: 'desc-listening', color: {color: '#cccccc'}, width: 2, dashes: false, smooth: {type: 'discrete'}, physics: false},
-            {from: 'srtol', to: 'desc-srtol', color: {color: '#cccccc'}, width: 2, dashes: false, smooth: {type: 'discrete'}, physics: false},
-            {from: 'transfer', to: 'desc-transfer', color: {color: '#cccccc'}, width: 2, dashes: false, smooth: {type: 'discrete'}, physics: false},
-            {from: 'translingualism', to: 'desc-translingualism', color: {color: '#cccccc'}, width: 2, dashes: false, smooth: {type: 'discrete'}, physics: false},
-            {from: 'multimodality', to: 'desc-multimodality', color: {color: '#cccccc'}, width: 2, dashes: false, smooth: {type: 'discrete'}, physics: false},
-
             // Theory-to-theory connections
             {
                 from: 'grammar',
@@ -252,9 +184,8 @@
                 color: {color: '#e74c3c'},
                 width: 3,
                 dashes: [5, 3],
-                title: 'SRTOL directly opposes prescriptive grammar as the sole legitimate standard',
-                label: 'challenges:\nrejects monolingual\nstandard',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Directly challenges prescriptive grammar by rejecting monolingual standards and affirming linguistic diversity',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'grammar',
@@ -263,9 +194,8 @@
                 color: {color: '#e74c3c'},
                 width: 3,
                 dashes: [5, 3],
-                title: 'Translingualism fundamentally rejects grammar as a fixed, bounded system',
-                label: 'challenged by:\nfluidity vs.\nfixity',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Fundamentally rejects grammar as fixed, viewing language practices as fluid and negotiated',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'listening',
@@ -273,9 +203,8 @@
                 arrows: 'to,from',
                 color: {color: '#27ae60'},
                 width: 3,
-                title: 'Both emphasize the ethical imperative to value different language practices',
-                label: 'mutual support:\nethical stance\non difference',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Both emphasize ethical imperative to value and understand different language practices across cultures',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'listening',
@@ -283,9 +212,8 @@
                 arrows: 'to,from',
                 color: {color: '#27ae60'},
                 width: 3,
-                title: 'Both promote cross-cultural understanding through conscious engagement',
-                label: 'aligns:\ncross-cultural\nengagement',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Both promote conscious cross-cultural understanding through engagement with linguistic differences',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'listening',
@@ -293,9 +221,8 @@
                 arrows: 'to',
                 color: {color: '#3498db'},
                 width: 2,
-                title: 'Rhetorical listening skills transfer and adapt across different contexts',
-                label: 'enables:\nadaptive listening\nacross contexts',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Rhetorical listening skills transfer and adapt across different rhetorical contexts and situations',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'srtol',
@@ -303,9 +230,8 @@
                 arrows: 'to,from',
                 color: {color: '#9b59b6'},
                 width: 4,
-                title: 'Translingualism represents theoretical evolution of SRTOL',
-                label: 'evolves into:\nrights → resources\nparadigm',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Theoretical evolution from rights-based to resource-based framing of language diversity',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'srtol',
@@ -313,9 +239,8 @@
                 arrows: 'to',
                 color: {color: '#3498db'},
                 width: 2,
-                title: 'Student home languages become resources that transfer to academic contexts',
-                label: 'facilitates:\nhome language\nas scaffold',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Student home languages become resources that transfer to and enrich academic writing contexts',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'transfer',
@@ -323,9 +248,8 @@
                 arrows: 'to,from',
                 color: {color: '#27ae60'},
                 width: 3,
-                title: 'Language practices transfer across linguistic boundaries',
-                label: 'intersects:\nboundary crossing\npractices',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Language practices and strategies transfer across linguistic and cultural boundaries',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'transfer',
@@ -333,9 +257,8 @@
                 arrows: 'to,from',
                 color: {color: '#27ae60'},
                 width: 3,
-                title: 'Multimodal composing skills transfer across different media',
-                label: 'includes:\nmodal knowledge\ntransfer',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Multimodal composing skills and knowledge transfer across different media and contexts',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'transfer',
@@ -344,9 +267,8 @@
                 color: {color: '#95a5a6'},
                 width: 2,
                 dashes: [5, 5],
-                title: 'Transfer complicates grammar by showing it doesn\'t move unchanged across contexts',
-                label: 'complicates:\ncontext changes\napplication',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Shows that grammatical knowledge does not simply move unchanged across different contexts',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'translingualism',
@@ -354,9 +276,8 @@
                 arrows: 'to,from',
                 color: {color: '#27ae60'},
                 width: 3,
-                title: 'Both recognize multiple resources for meaning-making',
-                label: 'complements:\nmultiple meaning\nresources',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Both theories recognize multiple resources available for creating meaning beyond single modalities',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'multimodality',
@@ -364,9 +285,8 @@
                 arrows: 'to',
                 color: {color: '#f39c12'},
                 width: 2,
-                title: 'Multimodality extends grammar to include visual, spatial grammars',
-                label: 'extends:\nvisual/spatial\ngrammars',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Expands grammar concept to include visual, spatial, and gestural meaning-making systems',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'multimodality',
@@ -374,9 +294,8 @@
                 arrows: 'from',
                 color: {color: '#27ae60'},
                 width: 2,
-                title: 'Multimodal communication expands student rights to diverse semiotic modes',
-                label: 'broadens:\nsemiotic\nrights',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Multimodal communication expands student rights to include diverse semiotic modes of expression',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             },
             {
                 from: 'multimodality',
@@ -384,9 +303,8 @@
                 arrows: 'to,from',
                 color: {color: '#3498db'},
                 width: 2,
-                title: 'Rhetorical listening extends beyond verbal to multimodal modes',
-                label: 'expands:\nmultimodal\nlistening',
-                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                label: 'Rhetorical listening extends beyond verbal communication to include visual, spatial, and gestural modes',
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             }
         ]);
 
@@ -400,9 +318,8 @@
                         color: {color: '#00BCD4'},
                         width: 2,
                         dashes: [5, 3],
-                        title: `${woman.name}'s work exemplifies this theory`,
-                        label: 'exemplifies',
-                        font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                        label: "This woman's pioneering work demonstrates how the theory operates in practice and contributes to its development",
+                        font: {size: 14, align: 'middle', strokeWidth: 0}
                     });
                 });
             }
@@ -416,9 +333,8 @@
                         color: {color: '#FF8C42'},
                         width: 2,
                         dashes: [3, 6],
-                        title: `${llmId} perpetuates erasure of ${woman.name}'s contributions`,
-                        label: 'erases',
-                        font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                        label: "Training data bias causes this LLM to minimize or overlook this woman's foundational contributions to computing",
+                        font: {size: 14, align: 'middle', strokeWidth: 0}
                     });
                 });
             }
@@ -426,14 +342,14 @@
 
         // Add LLM failure connections to theories
         const llmTheoryFailures = [
-            {from: 'claude', to: 'listening', label: 'cannot practice'},
-            {from: 'claude', to: 'translingualism', label: 'homogenizes'},
-            {from: 'chatgpt', to: 'listening', label: 'cannot practice'},
-            {from: 'chatgpt', to: 'srtol', label: 'corrects away'},
-            {from: 'gemini', to: 'multimodality', label: 'text-centric'},
-            {from: 'gemini', to: 'translingualism', label: 'anglicizes'},
-            {from: 'copilot', to: 'transfer', label: 'ignores context'},
-            {from: 'copilot', to: 'srtol', label: 'standardizes'}
+            {from: 'claude', to: 'listening', label: 'This LLM lacks capacity for conscious cross-cultural understanding and ethical engagement'},
+            {from: 'claude', to: 'translingualism', label: 'This LLM tends to standardize language toward dominant patterns, erasing translingual sophistication'},
+            {from: 'chatgpt', to: 'listening', label: 'This LLM lacks capacity for conscious cross-cultural understanding and ethical engagement'},
+            {from: 'chatgpt', to: 'srtol', label: 'This LLM suggests corrections that erase students\' own languages in favor of standard English'},
+            {from: 'gemini', to: 'multimodality', label: 'This LLM primarily processes text, struggling to understand multimodal meaning-making practices'},
+            {from: 'gemini', to: 'translingualism', label: 'This LLM tends to suggest English translations, erasing the cultural specificity of translingual expression'},
+            {from: 'copilot', to: 'transfer', label: 'This LLM fails to recognize how knowledge transforms when transferred across different contexts'},
+            {from: 'copilot', to: 'srtol', label: 'This LLM enforces standardized forms, undermining linguistic diversity and student language rights'}
         ];
 
         llmTheoryFailures.forEach(conn => {
@@ -443,9 +359,8 @@
                 color: {color: '#FF8C42'},
                 width: 2,
                 dashes: [2, 4],
-                title: `${conn.from} fails to uphold this theory`,
                 label: conn.label,
-                font: {size: 10, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 14, align: 'middle', strokeWidth: 0}
             });
         });
 
@@ -507,46 +422,35 @@
         network.on('stabilizationIterationsDone', function() {
             network.setOptions({physics: false});
 
-            // Position main nodes (doubled for larger canvas)
+            // Position main nodes (increased spacing - tripled for more breathing room)
             const positions = [
-                {id: 'grammar', x: -600, y: -400},
-                {id: 'listening', x: 600, y: -400},
-                {id: 'srtol', x: -900, y: 200},
+                {id: 'grammar', x: -900, y: -600},
+                {id: 'listening', x: 900, y: -600},
+                {id: 'srtol', x: -1350, y: 300},
                 {id: 'transfer', x: 0, y: 0},
-                {id: 'translingualism', x: 900, y: 200},
-                {id: 'multimodality', x: 0, y: 600}
+                {id: 'translingualism', x: 1350, y: 300},
+                {id: 'multimodality', x: 0, y: 900}
             ];
 
-            // Position description boxes (doubled for larger canvas)
-            const descPositions = [
-                {id: 'desc-grammar', x: -600, y: -700},
-                {id: 'desc-listening', x: 600, y: -700},
-                {id: 'desc-srtol', x: -1300, y: 200},
-                {id: 'desc-transfer', x: 0, y: -300},
-                {id: 'desc-translingualism', x: 1300, y: 200},
-                {id: 'desc-multimodality', x: 0, y: 900}
-            ];
-
-            // Position LLMs on right side (doubled for larger canvas)
+            // Position LLMs on right side (increased spacing)
             const llmPositions = [
-                {id: 'claude', x: 1100, y: -300},
-                {id: 'chatgpt', x: 1100, y: -100},
-                {id: 'gemini', x: 1100, y: 100},
-                {id: 'copilot', x: 1100, y: 300}
+                {id: 'claude', x: 1650, y: -450},
+                {id: 'chatgpt', x: 1650, y: -150},
+                {id: 'gemini', x: 1650, y: 150},
+                {id: 'copilot', x: 1650, y: 450}
             ];
 
-            // Position women in circular pattern (doubled radius)
+            // Position women in circular pattern (increased radius for more space)
             const womenCount = womenData.length;
             womenData.forEach((woman, index) => {
                 const angle = (index / womenCount) * Math.PI * 2 - Math.PI / 2;
-                const radius = 400;
+                const radius = 600;
                 const x = Math.cos(angle) * radius;
                 const y = Math.sin(angle) * radius;
                 network.moveNode(woman.id, x, y);
             });
 
             positions.forEach(pos => network.moveNode(pos.id, pos.x, pos.y));
-            descPositions.forEach(pos => network.moveNode(pos.id, pos.x, pos.y));
             llmPositions.forEach(pos => network.moveNode(pos.id, pos.x, pos.y));
 
             setTimeout(() => {

@@ -54,9 +54,9 @@
                 id: 'grammar',
                 label: 'GRAMMAR',
                 color: '#FF6B6B',
-                font: {size: 20, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: true},
                 title: 'Click for full description',
-                size: 45,
+                size: 90,
                 shape: 'circle',
                 type: 'theory'
             },
@@ -64,10 +64,10 @@
                 id: 'desc-grammar',
                 label: 'Traditional prescriptive rules\n• Standardized forms\n• Correctness emphasis\n• Fixed structures\n• Privileged varieties',
                 color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 12, color: '#333', multi: true},
+                font: {size: 27, color: '#333', multi: true},
                 shape: 'box',
                 shapeProperties: {borderRadius: 8},
-                size: 25,
+                size: 50,
                 type: 'description'
             },
 
@@ -75,9 +75,9 @@
                 id: 'listening',
                 label: 'RHETORICAL\nLISTENING',
                 color: '#4ECDC4',
-                font: {size: 20, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: true},
                 title: 'Click for full description',
-                size: 45,
+                size: 90,
                 shape: 'circle',
                 type: 'theory'
             },
@@ -85,10 +85,10 @@
                 id: 'desc-listening',
                 label: 'Krista Ratcliffe framework\n• Conscious identification\n• Cross-cultural understanding\n• Acknowledging differences\n• Ethical engagement',
                 color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 12, color: '#333', multi: true},
+                font: {size: 27, color: '#333', multi: true},
                 shape: 'box',
                 shapeProperties: {borderRadius: 8},
-                size: 25,
+                size: 50,
                 type: 'description'
             },
 
@@ -96,9 +96,9 @@
                 id: 'srtol',
                 label: "STUDENTS' RIGHTS\nTO THEIR\nOWN LANGUAGE",
                 color: '#45B7D1',
-                font: {size: 20, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: true},
                 title: 'Click for full description',
-                size: 50,
+                size: 100,
                 shape: 'circle',
                 type: 'theory'
             },
@@ -106,10 +106,10 @@
                 id: 'desc-srtol',
                 label: '1974 CCCC Statement\n• Linguistic diversity valued\n• Home languages affirmed\n• Code-meshing supported\n• Dialect rights recognized',
                 color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 12, color: '#333', multi: true},
+                font: {size: 27, color: '#333', multi: true},
                 shape: 'box',
                 shapeProperties: {borderRadius: 8},
-                size: 25,
+                size: 50,
                 type: 'description'
             },
 
@@ -117,9 +117,9 @@
                 id: 'transfer',
                 label: 'TRANSFER',
                 color: '#96CEB4',
-                font: {size: 20, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: true},
                 title: 'Click for full description',
-                size: 45,
+                size: 90,
                 shape: 'circle',
                 type: 'theory'
             },
@@ -127,10 +127,10 @@
                 id: 'desc-transfer',
                 label: 'Knowledge application\n• Context adaptation\n• Writing development\n• Prior knowledge use\n• Boundary crossing',
                 color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 12, color: '#333', multi: true},
+                font: {size: 27, color: '#333', multi: true},
                 shape: 'box',
                 shapeProperties: {borderRadius: 8},
-                size: 25,
+                size: 50,
                 type: 'description'
             },
 
@@ -138,9 +138,9 @@
                 id: 'translingualism',
                 label: 'TRANSLINGUALISM',
                 color: '#45B7D1',
-                font: {size: 20, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: true},
                 title: 'Click for full description',
-                size: 50,
+                size: 100,
                 shape: 'circle',
                 type: 'theory'
             },
@@ -148,10 +148,10 @@
                 id: 'desc-translingualism',
                 label: 'Language as resource\n• Fluid practices\n• Dynamic negotiation\n• Difference as norm\n• Meaning negotiation',
                 color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 12, color: '#333', multi: true},
+                font: {size: 27, color: '#333', multi: true},
                 shape: 'box',
                 shapeProperties: {borderRadius: 8},
-                size: 25,
+                size: 50,
                 type: 'description'
             },
 
@@ -159,9 +159,9 @@
                 id: 'multimodality',
                 label: 'MULTIMODALITY',
                 color: '#FECA57',
-                font: {size: 20, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: true},
                 title: 'Click for full description',
-                size: 45,
+                size: 90,
                 shape: 'circle',
                 type: 'theory'
             },
@@ -169,10 +169,10 @@
                 id: 'desc-multimodality',
                 label: 'Multiple modes\n• Visual/Spatial/Aural\n• Digital composing\n• Design thinking\n• Semiotic resources',
                 color: {background: '#f0f0f0', border: '#ccc'},
-                font: {size: 12, color: '#333', multi: true},
+                font: {size: 27, color: '#333', multi: true},
                 shape: 'box',
                 shapeProperties: {borderRadius: 8},
-                size: 25,
+                size: 50,
                 type: 'description'
             },
 
@@ -181,9 +181,9 @@
                 id: 'claude',
                 label: 'Claude',
                 color: '#FF8C42',
-                font: {size: 18, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: true},
                 title: 'Click to see how Claude functions',
-                size: 35,
+                size: 70,
                 shape: 'box',
                 type: 'llm'
             },
@@ -191,9 +191,9 @@
                 id: 'chatgpt',
                 label: 'ChatGPT',
                 color: '#FF8C42',
-                font: {size: 18, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: true},
                 title: 'Click to see how ChatGPT functions',
-                size: 35,
+                size: 70,
                 shape: 'box',
                 type: 'llm'
             },
@@ -201,9 +201,9 @@
                 id: 'gemini',
                 label: 'Gemini',
                 color: '#FF8C42',
-                font: {size: 18, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: true},
                 title: 'Click to see how Gemini functions',
-                size: 35,
+                size: 70,
                 shape: 'box',
                 type: 'llm'
             },
@@ -211,9 +211,9 @@
                 id: 'copilot',
                 label: 'Co-Pilot',
                 color: '#FF8C42',
-                font: {size: 18, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: true},
                 title: 'Click to see how Co-Pilot functions',
-                size: 35,
+                size: 70,
                 shape: 'box',
                 type: 'llm'
             }
@@ -225,9 +225,9 @@
                 id: woman.id,
                 label: woman.name.split(' ')[0], // First name only for label
                 color: '#00968A',
-                font: {size: 14, color: 'white', bold: true},
+                font: {size: 27, color: 'white', bold: true},
                 title: `${woman.name}: ${woman.contribution}`,
-                size: 30,
+                size: 60,
                 shape: 'diamond',
                 type: 'woman',
                 data: woman
@@ -254,7 +254,7 @@
                 dashes: [5, 3],
                 title: 'SRTOL directly opposes prescriptive grammar as the sole legitimate standard',
                 label: 'challenges:\nrejects monolingual\nstandard',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'grammar',
@@ -265,7 +265,7 @@
                 dashes: [5, 3],
                 title: 'Translingualism fundamentally rejects grammar as a fixed, bounded system',
                 label: 'challenged by:\nfluidity vs.\nfixity',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'listening',
@@ -275,7 +275,7 @@
                 width: 3,
                 title: 'Both emphasize the ethical imperative to value different language practices',
                 label: 'mutual support:\nethical stance\non difference',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'listening',
@@ -285,7 +285,7 @@
                 width: 3,
                 title: 'Both promote cross-cultural understanding through conscious engagement',
                 label: 'aligns:\ncross-cultural\nengagement',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'listening',
@@ -295,7 +295,7 @@
                 width: 2,
                 title: 'Rhetorical listening skills transfer and adapt across different contexts',
                 label: 'enables:\nadaptive listening\nacross contexts',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'srtol',
@@ -305,7 +305,7 @@
                 width: 4,
                 title: 'Translingualism represents theoretical evolution of SRTOL',
                 label: 'evolves into:\nrights → resources\nparadigm',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'srtol',
@@ -315,7 +315,7 @@
                 width: 2,
                 title: 'Student home languages become resources that transfer to academic contexts',
                 label: 'facilitates:\nhome language\nas scaffold',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'transfer',
@@ -325,7 +325,7 @@
                 width: 3,
                 title: 'Language practices transfer across linguistic boundaries',
                 label: 'intersects:\nboundary crossing\npractices',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'transfer',
@@ -335,7 +335,7 @@
                 width: 3,
                 title: 'Multimodal composing skills transfer across different media',
                 label: 'includes:\nmodal knowledge\ntransfer',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'transfer',
@@ -346,7 +346,7 @@
                 dashes: [5, 5],
                 title: 'Transfer complicates grammar by showing it doesn\'t move unchanged across contexts',
                 label: 'complicates:\ncontext changes\napplication',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'translingualism',
@@ -356,7 +356,7 @@
                 width: 3,
                 title: 'Both recognize multiple resources for meaning-making',
                 label: 'complements:\nmultiple meaning\nresources',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'multimodality',
@@ -366,7 +366,7 @@
                 width: 2,
                 title: 'Multimodality extends grammar to include visual, spatial grammars',
                 label: 'extends:\nvisual/spatial\ngrammars',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'multimodality',
@@ -376,7 +376,7 @@
                 width: 2,
                 title: 'Multimodal communication expands student rights to diverse semiotic modes',
                 label: 'broadens:\nsemiotic\nrights',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             },
             {
                 from: 'multimodality',
@@ -386,7 +386,7 @@
                 width: 2,
                 title: 'Rhetorical listening extends beyond verbal to multimodal modes',
                 label: 'expands:\nmultimodal\nlistening',
-                font: {size: 12, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
             }
         ]);
 
@@ -402,7 +402,7 @@
                         dashes: [5, 3],
                         title: `${woman.name}'s work exemplifies this theory`,
                         label: 'exemplifies',
-                        font: {size: 10, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                        font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
                     });
                 });
             }
@@ -418,7 +418,7 @@
                         dashes: [3, 6],
                         title: `${llmId} perpetuates erasure of ${woman.name}'s contributions`,
                         label: 'erases',
-                        font: {size: 10, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
+                        font: {size: 27, align: 'middle', background: 'white', strokeWidth: 2, strokeColor: 'white'}
                     });
                 });
             }
@@ -507,39 +507,39 @@
         network.on('stabilizationIterationsDone', function() {
             network.setOptions({physics: false});
 
-            // Position main nodes
+            // Position main nodes (doubled for larger canvas)
             const positions = [
-                {id: 'grammar', x: -300, y: -200},
-                {id: 'listening', x: 300, y: -200},
-                {id: 'srtol', x: -450, y: 100},
+                {id: 'grammar', x: -600, y: -400},
+                {id: 'listening', x: 600, y: -400},
+                {id: 'srtol', x: -900, y: 200},
                 {id: 'transfer', x: 0, y: 0},
-                {id: 'translingualism', x: 450, y: 100},
-                {id: 'multimodality', x: 0, y: 300}
+                {id: 'translingualism', x: 900, y: 200},
+                {id: 'multimodality', x: 0, y: 600}
             ];
 
-            // Position description boxes
+            // Position description boxes (doubled for larger canvas)
             const descPositions = [
-                {id: 'desc-grammar', x: -300, y: -350},
-                {id: 'desc-listening', x: 300, y: -350},
-                {id: 'desc-srtol', x: -650, y: 100},
-                {id: 'desc-transfer', x: 0, y: -150},
-                {id: 'desc-translingualism', x: 650, y: 100},
-                {id: 'desc-multimodality', x: 0, y: 450}
+                {id: 'desc-grammar', x: -600, y: -700},
+                {id: 'desc-listening', x: 600, y: -700},
+                {id: 'desc-srtol', x: -1300, y: 200},
+                {id: 'desc-transfer', x: 0, y: -300},
+                {id: 'desc-translingualism', x: 1300, y: 200},
+                {id: 'desc-multimodality', x: 0, y: 900}
             ];
 
-            // Position LLMs on right side
+            // Position LLMs on right side (doubled for larger canvas)
             const llmPositions = [
-                {id: 'claude', x: 550, y: -150},
-                {id: 'chatgpt', x: 550, y: -50},
-                {id: 'gemini', x: 550, y: 50},
-                {id: 'copilot', x: 550, y: 150}
+                {id: 'claude', x: 1100, y: -300},
+                {id: 'chatgpt', x: 1100, y: -100},
+                {id: 'gemini', x: 1100, y: 100},
+                {id: 'copilot', x: 1100, y: 300}
             ];
 
-            // Position women in circular pattern
+            // Position women in circular pattern (doubled radius)
             const womenCount = womenData.length;
             womenData.forEach((woman, index) => {
                 const angle = (index / womenCount) * Math.PI * 2 - Math.PI / 2;
-                const radius = 200;
+                const radius = 400;
                 const x = Math.cos(angle) * radius;
                 const y = Math.sin(angle) * radius;
                 network.moveNode(woman.id, x, y);

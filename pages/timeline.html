@@ -3,216 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Interactive 300-year timeline of women's contributions to rhetoric, composition, and communication">
-    <title>Timeline | Latino Women's Rhetoric & LLMs</title>
-
+    <meta http-equiv="refresh" content="0; url=../index.html#timeline-heading">
+    <title>Redirecting to Timeline | Latino Women's Rhetoric & LLMs</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/timeline.css">
-    <link rel="stylesheet" href="../css/visualizations.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <style>
+        .redirect-message {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+        }
+        .redirect-message h1 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .redirect-message p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        .redirect-message a {
+            color: var(--accent-teal);
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <header role="banner">
-        <div class="container">
-            <div class="header-content">
-                <h1><a href="../index.html">Latino Women's Rhetoric & LLMs</a></h1>
-                <p class="tagline">Examining AI's Impact on Culture, Identity, and Representation</p>
-            </div>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-                <span class="theme-icon">🌙</span>
-            </button>
-        </div>
-
-        <nav role="navigation" aria-label="Main navigation">
-            <ul class="nav-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About Rhetoric</a></li>
-                <li><a href="applications.html">Implications</a></li>
-                <li><a href="timeline.html" class="active" aria-current="page">Timeline</a></li>
-                <li><a href="llm-analysis.html">LLM Analysis</a></li>
-                <li><a href="demonstrations.html">Demonstrations</a></li>
-                <li><a href="contribute.html">Contribute</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main id="main-content" role="main">
-        <div class="container">
-            <header class="page-header">
-                <h2>300 Years of Women's Contributions</h2>
-                <p class="lead">
-                    Explore three centuries of women's contributions to rhetoric, composition, and communication
-                </p>
-            </header>
-
-            <!-- Timeline Controls -->
-            <section class="timeline-controls" aria-label="Timeline filters and controls">
-                <div class="control-group">
-                    <h3>View</h3>
-                    <div class="button-group" role="group" aria-label="Timeline track selection">
-                        <button id="view-both" class="btn btn-small active" aria-pressed="true">Both Tracks</button>
-                        <button id="view-latino" class="btn btn-small" aria-pressed="false">Latino Women</button>
-                        <button id="view-all" class="btn btn-small" aria-pressed="false">All Women</button>
-                    </div>
-                </div>
-
-                <div class="control-group">
-                    <h3>Era</h3>
-                    <select id="era-filter" aria-label="Filter by time period">
-                        <option value="all">All Eras</option>
-                        <option value="1700-1799">1700s</option>
-                        <option value="1800-1849">Early 1800s</option>
-                        <option value="1850-1899">Late 1800s</option>
-                        <option value="1900-1949">Early 1900s</option>
-                        <option value="1950-1999">Late 1900s</option>
-                        <option value="2000-2024">2000s-Present</option>
-                    </select>
-                </div>
-
-                <div class="control-group">
-                    <h3>Field</h3>
-                    <select id="field-filter" aria-label="Filter by field">
-                        <option value="all">All Fields</option>
-                        <option value="rhetoric">Rhetoric</option>
-                        <option value="composition">Composition</option>
-                        <option value="education">Education</option>
-                        <option value="linguistics">Linguistics</option>
-                        <option value="literature">Literature</option>
-                        <option value="ai">Artificial Intelligence</option>
-                        <option value="activism">Activism</option>
-                    </select>
-                </div>
-
-                <div class="control-group">
-                    <label for="search-timeline">
-                        <h3>Search</h3>
-                        <input
-                            type="search"
-                            id="search-timeline"
-                            placeholder="Search contributors..."
-                            aria-label="Search timeline contributors"
-                        >
-                    </label>
-                </div>
-
-                <button id="reset-filters" class="btn btn-secondary btn-small">Reset All Filters</button>
-            </section>
-
-            <!-- Interactive Timeline Visualization -->
-            <section class="timeline-visualization" aria-labelledby="timeline-heading">
-                <h3 id="timeline-heading" class="sr-only">Interactive Timeline Visualization</h3>
-                <div id="timeline-canvas" class="visualization-container" role="img" aria-label="Interactive dual-track timeline of women contributors"></div>
-
-                <div class="timeline-legend">
-                    <h4>Legend</h4>
-                    <div class="legend-items">
-                        <div class="legend-item">
-                            <span class="legend-color" style="background: var(--accent-pink);"></span>
-                            <span>Latino Women</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-color" style="background: var(--accent-purple);"></span>
-                            <span>All Women</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="visualization-controls">
-                    <button id="zoom-in" class="btn btn-small" aria-label="Zoom in">+</button>
-                    <button id="zoom-out" class="btn btn-small" aria-label="Zoom out">−</button>
-                    <button id="reset-zoom" class="btn btn-small">Reset View</button>
-                </div>
-            </section>
-
-            <!-- Detail Panel -->
-            <aside id="detail-panel" class="detail-panel" aria-live="polite" hidden>
-                <button class="close-panel" aria-label="Close detail panel">×</button>
-                <div id="detail-content">
-                    <!-- Content populated by JavaScript -->
-                </div>
-            </aside>
-
-            <!-- Timeline List View -->
-            <section class="timeline-list" aria-labelledby="list-heading">
-                <h3 id="list-heading">Contributors List</h3>
-                <p class="list-description">
-                    <span id="result-count">Loading...</span> contributors shown
-                </p>
-                <div id="contributors-list" class="contributors-grid">
-                    <!-- Populated by JavaScript -->
-                </div>
-            </section>
-
-            <!-- Information Section -->
-            <section class="timeline-info" aria-labelledby="info-heading">
-                <h3 id="info-heading">About This Timeline</h3>
-                <p>
-                    This interactive timeline presents a dual-track view of women's contributions to rhetoric,
-                    composition, and communication over the past 300 years. The top track focuses specifically
-                    on Latino women's contributions, while the bottom track shows all women contributors.
-                </p>
-
-                <h4>Why Two Tracks?</h4>
-                <p>
-                    Viewing these tracks together reveals important patterns:
-                </p>
-                <ul>
-                    <li><strong>Visibility gaps:</strong> Periods where Latino women's contributions are underrepresented</li>
-                    <li><strong>Parallel innovations:</strong> Similar work happening simultaneously in different communities</li>
-                    <li><strong>Recognition delays:</strong> How long it took for contributions to be acknowledged</li>
-                    <li><strong>Contemporary growth:</strong> Increasing representation and documentation in recent decades</li>
-                </ul>
-
-                <h4>Data Sources</h4>
-                <p>
-                    This timeline is compiled from academic research, historical records, and community archives.
-                    If you notice omissions or errors, please <a href="contribute.html">contribute corrections</a>.
-                </p>
-
-                <div class="callout">
-                    <p>
-                        <strong>Note:</strong> This timeline is a work in progress. Many Latino women's rhetorical
-                        contributions remain undocumented or underrecognized, particularly from earlier centuries
-                        and oral traditions.
-                    </p>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <footer role="contentinfo">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>About This Project</h3>
-                    <p>
-                        An educational platform examining the intersection of rhetoric, composition,
-                        and artificial intelligence, with focus on Latino women's voices.
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="about.html">About Rhetoric</a></li>
-                        <li><a href="timeline.html">Timeline</a></li>
-                        <li><a href="demonstrations.html">Demonstrations</a></li>
-                        <li><a href="contribute.html">Contribute</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Latino Women's Rhetoric & LLMs. Educational use.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../js/main.js"></script>
-    <script src="../js/navigation.js"></script>
-    <script src="../js/data/timeline-data.js"></script>
-    <script src="../js/data/timeline-data-all.js"></script>
-    <script src="../js/visualizations/timeline-viz.js"></script>
+    <div class="redirect-message">
+        <h1>Redirecting to Timeline...</h1>
+        <p>The timeline has been moved to the home page for better accessibility.</p>
+        <p>If you are not redirected automatically, <a href="../index.html#timeline-heading">click here to view the timeline</a>.</p>
+    </div>
+    <script>
+        // Immediate redirect
+        window.location.href = '../index.html#timeline-heading';
+    </script>
 </body>
 </html>

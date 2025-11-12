@@ -968,6 +968,44 @@ textarea {
     }
 }
 
+/* ============================================
+   TIMELINE EMBED - FULL WIDTH
+   ============================================ */
+
+.timeline-embed {
+    width: 100vw;
+    min-height: 800px;
+    margin: var(--spacing-xl) 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    position: relative;
+    background: var(--bg-primary);
+}
+
+.timeline-embed iframe {
+    display: block;
+    width: 100%;
+    height: 800px;
+    border: none;
+}
+
+.timeline-attribution {
+    text-align: center;
+    padding: var(--spacing-sm);
+    background: var(--bg-secondary);
+}
+
+/* Responsive: smaller height on mobile */
+@media (max-width: 768px) {
+    .timeline-embed {
+        min-height: 600px;
+    }
+
+    .timeline-embed iframe {
+        height: 600px;
+    }
+}
+
 .legend-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

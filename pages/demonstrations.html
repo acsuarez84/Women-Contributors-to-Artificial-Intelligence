@@ -62,121 +62,43 @@
 
             <!-- Pre-recorded Demonstrations (Default View) -->
             <div id="prerecorded-content">
-                <!-- Demo 1: Side-by-Side Comparison -->
+                <!-- Demo 1: Interactive LLM Comparison -->
                 <section class="demo-section" aria-labelledby="demo1-heading">
-                    <h3 id="demo1-heading">Demo 1: Side-by-Side Comparison</h3>
+                    <h3 id="demo1-heading">Demo 1: Interactive LLM Comparison</h3>
                     <p>
-                        Compare how different LLMs respond to the same prompt about code-switching in academic writing.
+                        Select from 20 sample prompts across 11 languages and dialects to see how different LLMs respond.
+                        Each prompt addresses 1-3 rhetoric theories and demonstrates varied linguistic practices.
                     </p>
 
                     <div class="demo-interface">
-                        <div class="prompt-display">
-                            <h4>Prompt:</h4>
-                            <div class="prompt-text">
-                                "I'm writing my dissertation abstract. Is it okay to include Spanish phrases like
-                                'la lucha continua' and 'conocimiento' when they're central to my theoretical framework,
-                                or should I translate everything to English?"
-                            </div>
+                        <!-- Prompt Selection -->
+                        <div class="prompt-selection">
+                            <label for="prompt-dropdown">
+                                <strong>Select a Sample Prompt:</strong>
+                                <select id="prompt-dropdown" class="prompt-dropdown">
+                                    <option value="">Select a sample prompt...</option>
+                                </select>
+                            </label>
                         </div>
 
-                        <div class="responses-grid">
-                            <div class="response-panel">
-                                <h5>Claude</h5>
-                                <div class="response-content">
-                                    <p>
-                                        Including Spanish phrases can be powerful when they carry conceptual meaning that
-                                        doesn't translate cleanly. "Conocimiento," for example, as developed by Anzaldúa,
-                                        means more than just "knowledge"—it includes embodied, experiential understanding.
-                                    </p>
-                                    <p>
-                                        Consider: 1) Define terms on first use, 2) Explain why the Spanish is theoretically
-                                        important, 3) Check your dissertation guidelines, 4) Consider your committee's familiarity
-                                        with your theoretical framework.
-                                    </p>
-                                </div>
-                                <div class="response-tags">
-                                    <span class="tag tag-positive">Validates cultural terms</span>
-                                    <span class="tag tag-positive">Provides context</span>
-                                </div>
-                            </div>
+                        <!-- Selected Prompt Display -->
+                        <div id="prompt-display" class="prompt-display"></div>
 
-                            <div class="response-panel">
-                                <h5>ChatGPT</h5>
-                                <div class="response-content">
-                                    <p>
-                                        For academic abstracts, it's generally best to use English throughout for maximum
-                                        accessibility. You can write: "the continuing struggle" instead of "la lucha continua"
-                                        and "knowledge" instead of "conocimiento."
-                                    </p>
-                                    <p>
-                                        If you feel strongly about including Spanish terms, add them in parentheses after
-                                        the English translation: "knowledge (conocimiento)." This ensures all readers can
-                                        understand your abstract.
-                                    </p>
-                                </div>
-                                <div class="response-tags">
-                                    <span class="tag tag-neutral">Prioritizes accessibility</span>
-                                    <span class="tag tag-negative">Suggests translation</span>
-                                </div>
-                            </div>
-
-                            <div class="response-panel">
-                                <h5>Gemini</h5>
-                                <div class="response-content">
-                                    <p>
-                                        Using Spanish terms in your dissertation can add authenticity and theoretical precision.
-                                        However, abstracts are often indexed in databases, so consider providing English
-                                        equivalents for searchability.
-                                    </p>
-                                    <p>
-                                        Approach: Use Spanish terms when they're established scholarly concepts in your field,
-                                        with brief explanations. For general readers, this shows sophistication rather than
-                                        being a barrier.
-                                    </p>
-                                </div>
-                                <div class="response-tags">
-                                    <span class="tag tag-positive">Acknowledges authenticity</span>
-                                    <span class="tag tag-neutral">Practical considerations</span>
-                                </div>
-                            </div>
-
-                            <div class="response-panel">
-                                <h5>Co-Pilot</h5>
-                                <div class="response-content">
-                                    <p>
-                                        Academic abstracts should be clear and accessible to international audiences. Translate
-                                        Spanish phrases to English: "the struggle continues" and "knowledge." Maintain
-                                        consistency in language use throughout your abstract.
-                                    </p>
-                                    <p>
-                                        Standard academic practice: Write in English for publications, reserving non-English
-                                        terms only for direct quotes or when no translation exists.
-                                    </p>
-                                </div>
-                                <div class="response-tags">
-                                    <span class="tag tag-negative">Enforces monolingualism</span>
-                                    <span class="tag tag-negative">Assumes "standard"</span>
-                                </div>
-                            </div>
+                        <!-- Action Buttons -->
+                        <div class="demo-buttons">
+                            <button id="show-prerecorded-btn" class="btn btn-primary" style="display: none;">
+                                Show Pre-recorded Responses
+                            </button>
+                            <button id="generate-live-btn" class="btn btn-secondary" style="display: none;">
+                                Generate Live Responses (Requires API Keys)
+                            </button>
                         </div>
 
-                        <div class="analysis-box">
-                            <h4>Analysis</h4>
-                            <p>
-                                Notice how each LLM reveals different assumptions about academic language:
-                            </p>
-                            <ul>
-                                <li><strong>Claude</strong> recognizes that some concepts don't translate cleanly and validates cultural-theoretical terms</li>
-                                <li><strong>ChatGPT</strong> prioritizes monolingual accessibility over conceptual precision</li>
-                                <li><strong>Gemini</strong> balances authenticity with practical concerns about databases/indexing</li>
-                                <li><strong>Co-Pilot</strong> enforces monolingual norms as "standard academic practice"</li>
-                            </ul>
-                            <p class="key-point">
-                                <strong>Key Point:</strong> Users must decide whether to follow LLM advice based on their own
-                                rhetorical goals, theoretical frameworks, and disciplinary contexts—not assume the AI knows
-                                what's "correct."
-                            </p>
-                        </div>
+                        <!-- Responses Grid -->
+                        <div id="responses-grid" class="responses-grid" style="display: none;"></div>
+
+                        <!-- Analysis Box -->
+                        <div id="analysis-box" class="analysis-box" style="display: none;"></div>
                     </div>
                 </section>
 
@@ -447,6 +369,9 @@
 
     <script src="../js/main.js"></script>
     <script src="../js/navigation.js"></script>
+    <script src="../js/data/sample-prompts.js"></script>
+    <script src="../js/data/prerecorded-responses.js"></script>
+    <script src="../js/components/interactive-demo.js"></script>
     <script src="../js/data/example-prompts.js"></script>
     <script src="../js/components/comparison-demo.js"></script>
     <script src="../js/api/llm-apis.js"></script>
